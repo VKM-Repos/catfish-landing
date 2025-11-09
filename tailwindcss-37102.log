@@ -1,0 +1,62 @@
+2025-11-01T12:39:35.452229Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2025-11-01T12:39:35.452363Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "/Users/salscodes/vkm/catfish-landing", pattern: "**/*", negated: false }
+2025-11-01T12:39:35.452485Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2025-11-01T12:39:35.452498Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "/Users/salscodes/vkm/catfish-landing" }
+2025-11-01T12:39:35.455288Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-11-01T12:39:35.455352Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-01T12:39:35.457386Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/app"
+2025-11-01T12:39:35.457575Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/app/(main)"
+2025-11-01T12:39:35.457670Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/app/(main)/layout.tsx"
+2025-11-01T12:39:35.457709Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/app/(main)/page.tsx"
+2025-11-01T12:39:35.457756Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/app/globals.css"
+2025-11-01T12:39:35.457804Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/postcss.config.mjs"
+2025-11-01T12:39:35.457905Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/utils.ts"
+2025-11-01T12:39:35.458008Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/README.md"
+2025-11-01T12:39:35.458066Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components"
+2025-11-01T12:39:35.458205Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/ui"
+2025-11-01T12:39:35.458532Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/ui/button.tsx"
+2025-11-01T12:39:35.458616Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/shared"
+2025-11-01T12:39:35.458819Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/shared/hero.tsx"
+2025-11-01T12:39:35.458864Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/shared/navbar.tsx"
+2025-11-01T12:39:35.458894Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/shared/footer.tsx"
+2025-11-01T12:39:35.458959Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/layouts"
+2025-11-01T12:39:35.459020Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/layouts/flex-box.tsx"
+2025-11-01T12:39:35.459077Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public"
+2025-11-01T12:39:35.459175Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/file.svg"
+2025-11-01T12:39:35.459332Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/vercel.svg"
+2025-11-01T12:39:35.459399Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/next.svg"
+2025-11-01T12:39:35.459489Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/globe.svg"
+2025-11-01T12:39:35.459558Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets"
+2025-11-01T12:39:35.459880Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets/acp.svg"
+2025-11-01T12:39:35.459931Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets/catfish_dashboard.svg"
+2025-11-01T12:39:35.459964Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets/german.svg"
+2025-11-01T12:39:35.459990Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets/fao.svg"
+2025-11-01T12:39:35.460193Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets/catfish_dash.svg"
+2025-11-01T12:39:35.460237Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets/eu.svg"
+2025-11-01T12:39:35.460264Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets/logo.svg"
+2025-11-01T12:39:35.460297Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/window.svg"
+2025-11-01T12:39:35.460358Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/package.json"
+2025-11-01T12:39:35.460615Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/lib"
+2025-11-01T12:39:35.460739Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/lib/utils.ts"
+2025-11-01T12:39:35.460821Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components.json"
+2025-11-01T12:39:35.460851Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/tsconfig.json"
+2025-11-01T12:39:35.460916Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/.vscode"
+2025-11-01T12:39:35.460977Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/.vscode/settings.json"
+2025-11-01T12:39:35.461016Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/eslint.config.mjs"
+2025-11-01T12:39:35.461042Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/next.config.ts"
+2025-11-01T12:39:35.461148Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-01T12:39:35.476508Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-11-01T12:39:35.476613Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-11-01T12:39:35.476628Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-01T12:39:35.482321Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/app"
+2025-11-01T12:39:35.482495Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/app/(main)"
+2025-11-01T12:39:35.483179Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components"
+2025-11-01T12:39:35.483282Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/ui"
+2025-11-01T12:39:35.483412Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/shared"
+2025-11-01T12:39:35.484009Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/components/layouts"
+2025-11-01T12:39:35.484129Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public"
+2025-11-01T12:39:35.484440Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/public/assets"
+2025-11-01T12:39:35.484910Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/lib"
+2025-11-01T12:39:35.485217Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/salscodes/vkm/catfish-landing/.vscode"
+2025-11-01T12:39:35.485368Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-01T12:39:35.489144Z  INFO get_globs: tailwindcss_oxide::scanner: exit

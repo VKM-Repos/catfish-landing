@@ -1,14 +1,12 @@
 import Link from "next/link";
-import React from "react";
 import Image from "next/image";
-import { FlexBox } from "../layouts/flex-box";
 import { Button } from "../ui/button";
 
 export default function Navbar() {
   return (
     <nav className="pt-10 font-palanquin">
-      <div className="wrapper flex justify-between items-center border border-neutral-200 p-3 rounded-full">
-        <div className="flex items-center">
+      <div className=" flex md:justify-between justify-center items-center border border-neutral-200 p-3 rounded-full">
+        <div className="md:flex items-center hidden">
           <Image
             src="/assets/logo.svg"
             width={36}
@@ -17,21 +15,19 @@ export default function Navbar() {
           />
           <h1 className="ml-2 text-primary-500 text-3xl font-bold">ADMS</h1>
         </div>
-        <ul className="flex gap-5 bg-neutral-100 py-3 px-7 rounded-full">
+        <ul className="flex justify-center gap-5 bg-neutral-100 py-3 px-7 rounded-full">
+          <li></li>
           <li>
-            <Link href="/">Features</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about">Home</Link>
-          </li>
-          <li>
-            <Link href="/contact">Features</Link>
+            <Link href="/features">Features</Link>
           </li>
           <li>
             <Link href="/support">Support</Link>
           </li>
         </ul>
-        <Button className="bg-primary-800 text-white text-base font-normal rounded-full py-6 flex items-center justify-center gap-2">
+        <Button className="bg-primary-800 text-white text-base font-normal rounded-full py-6 hidden md:flex items-center justify-center gap-2">
           Get App
           <svg
             xmlns="http://www.w3.org/2000/svg"

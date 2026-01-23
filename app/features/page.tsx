@@ -1,4 +1,5 @@
 import FAQSection from "@/components/shared/faq";
+import { FarmSlider } from "@/components/shared/farm-slider";
 import Hero from "@/components/shared/hero";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -143,8 +144,11 @@ export default function Features() {
             width={1232}
             height={615}
             alt="Manage Farm section"
-            className="w-[1232px] max-auto"
+            className="w-[1232px] max-auto hidden md:block"
           />
+          <div className="md:hidden">
+            <FarmSlider />
+          </div>
         </div>
         <div className=" md:px-[150px] flex md:flex-row flex-col md:justify-between md:items-center mt-14">
           <div className="space-y-8">

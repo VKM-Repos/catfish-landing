@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function Navbar() {
   return (
-    <nav className="pt-10 font-palanquin">
+    <nav className="pt-10 font-palanquin md:px-[150px]">
       <div className=" flex md:justify-between justify-center items-center border border-neutral-200 p-3 rounded-full">
         <div className="md:flex items-center hidden">
           <Image

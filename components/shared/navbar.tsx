@@ -15,7 +15,7 @@ export default function Navbar() {
           />
           <h1 className="ml-2 text-primary-500 text-3xl font-bold">ADMS</h1>
         </div>
-        <ul className="flex justify-center gap-5 bg-neutral-100 py-3 px-7 rounded-full">
+        <ul className="flex justify-center gap-5 bg-[#F9F9F9] py-3 px-7 rounded-full">
           <li></li>
           <li>
             <Link href="/">Home</Link>

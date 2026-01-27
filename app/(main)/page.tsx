@@ -1,8 +1,6 @@
 import FAQSection from "@/components/shared/faq";
-import Faq from "@/components/shared/faq";
 import Hero from "@/components/shared/hero";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import BeforeAfterSlider from "./components/slider";
 import FeatureTabs from "./components/feature-tabs";
@@ -73,13 +71,16 @@ export default function Home() {
         </h2>
         <div className="md:wrapper relative flex md:flex-row flex-col justify-center items-center gap-10 mt-7 w-full px-4">
           <div className="md:w-full flex flex-col gap-5 px-5 py-7 justify-center items-start border-6 border-primary-200 rounded-[17px] overflow-x-hidden bg-[#FC80FF]">
-            <Image
-              src={"/assets/linechart.svg"}
-              width={650}
-              height={202}
-              alt="Line chart sample"
-              className="md:w-[650px] w-full object-cover"
-            />
+            <div className="max-h-[430px] md:max-h-[460px]  md:w-[650px] overflow-hidden">
+              <Image
+                src={"/assets/linechart.svg"}
+                width={650}
+                height={202}
+                alt="Line chart sample"
+                className="md:w-[650px] w-full object-cover"
+              />
+            </div>
+
             <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white">
               Sustainable
             </Button>
@@ -90,13 +91,15 @@ export default function Home() {
             </p>
           </div>
           <div className="md:w-full  flex flex-col gap-5 px-5 py-7 justify-center items-start border-6 border-primary-200 rounded-[17px] overflow-x-hidden bg-[#FCCB9E]">
-            <Image
-              src={"/assets/feat.svg"}
-              width={640}
-              height={202}
-              alt="Main Features"
-              className="max-h-[430px]  md:w-[640px] w-full object-cover"
-            />
+            <div className="max-h-[430px] md:max-h-[460px]  md:w-[650px] overflow-hidden">
+              <Image
+                src={"/assets/feat.svg"}
+                width={650}
+                height={250}
+                alt="Main Features"
+                className="max-h-[430px] md:max-h-[460px]  md:w-[650px] w-full object-cover"
+              />
+            </div>
             <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white">
               Connected
             </Button>
@@ -128,7 +131,7 @@ export default function Home() {
       </section>
 
       <section className="md:bg-[url(/assets/rectangle.svg)] bg-[url(/assets/mobile_rectangle.svg)] bg-no-repeat bg-cover md:h-[1480px] h-[1048px] flex flex-col items-center justify-center mt-[100px]">
-        <div className="flex flex-col gap-4 justify-center items-center mx-auto md:w-[695px] w-[353px]">
+        <div className="flex flex-col gap-4 justify-center items-center mx-auto md:w-[695px] w-[353px] md:-mt-[200px]">
           <h2 className="font-bold text-[40px] text-center">
             Key Features of ADMS
           </h2>

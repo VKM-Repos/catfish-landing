@@ -9,8 +9,18 @@ export default function Features() {
   return (
     <>
       <Hero>
-        <div className="md:px-[150px] flex md:flex-row flex-col md:items-center md:justify-between pt-12 h-[780px]">
-          <div className="md:w-[40%] w-[353px] flex flex-col gap-3.5 px-5 md:ml-38 mb-10 md:mb-0">
+        <div className="relative md:px-[150px] flex md:flex-row flex-col md:items-center md:justify-between pt-12 h-[780px]">
+          <img
+            src="/assets/water_vector.svg"
+            className="absolute top-0 w-[1445px] h-[500px] hidden md:block"
+            alt=""
+          />
+          <img
+            src="/assets/water_vector.svg"
+            className="absolute bottom-0 w-[1445px] h-[px] hidden md:block"
+            alt=""
+          />
+          <div className="md:w-[40%] w-[353px] flex flex-col gap-3.5 px-5 md:ml-38 mb-10 md:mb-0 z-10">
             <h2 className="md:text-6xl text-3xl text-primary-700 font-bold md:w-[579px] md:leading-16">
               Built to Simplify, Connect, and Grow Aquaculture
             </h2>

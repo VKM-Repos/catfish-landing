@@ -33,14 +33,19 @@ export function FarmSlider() {
 
   return (
     <>
-      <div className="w-[336px] h-[450px] bg-primary-800 rounded-2xl overflow-hidden relative">
+      <div className=" w-[336px] h-[450px] bg-primary-800 rounded-2xl overflow-hidden relative">
         <Image
           src={"/assets/water_mark.svg"}
           width={200}
           height={615}
           alt="Manage Farm section"
-          className="w-[1232px] max-auto"
+          className="w-[1232px] max-auto absolute opacity-50"
         />
+        <div className="z-[2000] w-[300px] mx-auto mt-5">
+          <h2 className="text-white text-[35px] font-bold text-center px-2 relative">
+            Manage Your Farm, Anytime, Anywhere
+          </h2>
+        </div>
         <div className="flex gap-4 justify-center absolute top-50 left-30 z-30">
           {/* Prev */}
           <button onClick={() => api?.scrollPrev()}>

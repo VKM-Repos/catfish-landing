@@ -10,8 +10,18 @@ export default function Home() {
   return (
     <>
       <Hero>
-        <div className="flex flex-col md:flex-row md:items-center md:justify-center pt-12 md:h-[780px]">
-          <div className="md:w-[40%] flex flex-col gap-3.5 md:ml-38 px-5">
+        <div className="relative flex flex-col md:flex-row md:items-center md:justify-center pt-12 md:h-[780px]">
+          <img
+            src="/assets/water_vector.svg"
+            className="absolute top-0 w-[1445px] h-[500px] hidden md:block"
+            alt=""
+          />
+          <img
+            src="/assets/water_vector.svg"
+            className="absolute bottom-0 w-[1445px] h-[px] hidden md:block"
+            alt=""
+          />
+          <div className="relative md:w-[40%] flex flex-col gap-3.5 md:ml-38 px-5">
             <h2 className="md:text-6xl text-4xl text-primary-700 font-bold md:w-[579px] w-[355px] md:leading-16">
               Empowering Aqua-culture Through Smart Data Innovation
             </h2>
@@ -53,13 +63,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="md:w-[60%] flex flex-col pb-10">
+          <div className="md:w-[60%] flex flex-col md:pt-14">
             <Image
               src={"/assets/catfish_dash.svg"}
               width={1000}
               height={400}
               alt="Dashboard screen"
-              className="object-cover"
+              className="object-cover z-10"
             />
           </div>
         </div>
@@ -243,8 +253,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:px-[150px] flex md:flex-row flex-col md:items-center md:justify-center md:mt-[100px] px-5">
-        <div className="md:w-[40%] h-fit sticky space-y-10">
+      <section className="md:px-[150px] flex md:flex-row flex-col md:items-start md:justify-center md:mt-[100px] px-5 gap-8">
+        <div className="md:w-[40%] h-fit md:sticky md:top-20 space-y-10 flex-shrink-0">
           <div>
             <h2 className="font-bold text-4xl">You have got questions? </h2>
             <h2 className="font-bold text-4xl">We’ve got answers</h2>
@@ -273,7 +283,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="md:w-[60%]">
+        <div className="md:w-[60%] flex-shrink-0">
           <FAQSection />
         </div>
       </section>

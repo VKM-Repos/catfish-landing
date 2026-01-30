@@ -8,24 +8,28 @@ const TABS = [
     title: "Real-Time Data Collection",
     description:
       "Capture essential data from the field using mobile devices. Update production, feeding, and harvest records instantly even in low-connectivity areas.",
+    image: "/assets/tab_1.svg",
   },
   {
     id: "production",
     title: "Production Cycle Tracking",
     description:
       "Monitor fish growth, feed usage, and cycle performance over time. Access insights that help improve yields and reduce waste.",
+    image: "/assets/tab_2.svg",
   },
   {
     id: "financial",
     title: "Financial Monitoring",
     description:
       "Record feed costs, input expenses, and sales revenue in real-time. View profit summaries and make data-driven financial decisions.",
+    image: "/assets/tab_3.svg",
   },
   {
     id: "reporting",
     title: "Reporting & Analytics",
     description:
       "Generate automated reports for farmers, clusters, and stakeholders. Track trends, performance, and impact through clear visual dashboards.",
+    image: "/assets/tab_4.svg",
   },
 ];
 
@@ -35,12 +39,12 @@ export default function FeatureTabs() {
   return (
     <section className="md:wrapper mx-auto py-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-center justify-center">
-        <div className="relative w-full">
+        <div className="relative w-full transition-opacity duration-300">
           <Image
-            src={"/assets/key_feat.svg"}
+            src={TABS[activeTab].image}
             width={780}
             height={443}
-            alt="Features illustration"
+            alt={TABS[activeTab].title}
             className="md:w-[780px] w-[450px] object-cover"
           />
         </div>

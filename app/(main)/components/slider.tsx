@@ -34,14 +34,17 @@ export default function BeforeAfterSlider() {
 
         {/* BEFORE IMAGE */}
         <div
-          className="absolute inset-0 overflow-hidden"
+          className="absolute inset-0 overflow-hidden border-0 border-r-4 border-[#F3F3F3]"
           style={{ width: `${position}%` }}
         >
           <img
             src="/assets/before.jpg"
             alt="Before"
-            className="h-full object-cover pointer-events-none"
-            style={{ width: "100%", maxWidth: "80rem" }}
+            className="h-full object-cover pointer-events-none "
+            style={{
+              width: `${10000 / position}%`,
+              maxWidth: "none",
+            }}
           />
         </div>
 

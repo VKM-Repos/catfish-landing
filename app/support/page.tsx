@@ -3,63 +3,67 @@ import Hero from "@/components/shared/hero";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
+import { SupportCarousel } from "./components/support-carousel";
 
 export default function Support() {
   return (
     <div className="">
-      <div className="flex flex-col justify-center items-center text-center bg-[url(/assets/support_hero_img.svg)] bg-center bg-cover bg-no-repeat h-[580px] w-[95%] mx-auto rounded-b-3xl">
-        <div className="space-y-10 md:mb-[150px]">
-          <div className="space-y-3">
-            <h2 className="md:text-[61px] text-[40px] font-bold text-neutral-700">
-              Support Center
-            </h2>
-            <p className="text-base text-neutral-600">
-              Get the Support You Need, When You Need It
+      <Hero>
+        <div className="flex flex-col justify-center items-center text-center bg-[url(/assets/support_hero_bg.svg)] bg-center bg-cover bg-no-repeat h-[580px] w-full mx-auto rounded-b-3xl">
+          <div className="space-y-10 md:mb-[150px] mt-[120px] px-2">
+            <div className="space-y-3">
+              <h2 className="md:text-[61px] text-[40px] font-bold text-neutral-700">
+                Support Center
+              </h2>
+              <p className="text-base text-neutral-600">
+                Get the Support You Need, When You Need It
+              </p>
+            </div>
+            <p className="text-base text-neutral-600 md:w-[700px] w-full">
+              Whether you’re setting up your first pond, managing your cluster,
+              or exploring new features — ADMS Support is your go-to space for
+              guidance, tutorials, and updates.
             </p>
           </div>
-          <p className="text-base text-neutral-600 md:w-[700px] w-full">
-            Whether you’re setting up your first pond, managing your cluster, or
-            exploring new features — ADMS Support is your go-to space for
-            guidance, tutorials, and updates.
-          </p>
+          <div className="md:flex items-center gap-10 hidden absolute bottom-10">
+            <div className="flex flex-col items-start text-left w-[400px] h-[300px] p-5 border-3 border-neutral-200 rounded-2xl bg-white">
+              <Image
+                src={"/assets/started.svg"}
+                width={100}
+                height={100}
+                alt=""
+              />
+              <h2 className="font-bold text-[32px]">Getting started guide</h2>
+              <p className="text-[16px]">
+                Everything you need to know to set up your ADMS account, create
+                ponds, and start recording data.
+              </p>
+            </div>
+            <div className="flex flex-col items-start text-left w-[400px] h-[300px] p-5 border-3 border-neutral-200 rounded-2xl bg-white">
+              <Image src={"/assets/faq.svg"} width={100} height={100} alt="" />
+              <h2 className="font-bold text-[32px]">FAQs</h2>
+              <p className="text-[16px]">
+                Frequently asked questions and answers to every how to use and
+                get the best of using ADMS.
+              </p>
+            </div>
+            <div className="flex flex-col items-start text-left w-[400px] h-[300px] p-5 border-3 border-neutral-200 rounded-2xl bg-white">
+              <Image
+                src={"/assets/contact.svg"}
+                width={100}
+                height={100}
+                alt=""
+              />
+              <h2 className="font-bold text-[32px]">Contact & Helpdesk</h2>
+              <p className="text-[16px]">
+                Everything you need to know to set up your ADMS account, create
+                ponds, and start recording data.
+              </p>
+            </div>
+          </div>
+          <SupportCarousel />
         </div>
-        <div className="md:flex items-center gap-10 hidden absolute bottom-50">
-          <div className="flex flex-col items-start text-left w-[400px] h-[300px] p-5 border-3 border-neutral-200 rounded-2xl bg-white">
-            <Image
-              src={"/assets/started.svg"}
-              width={100}
-              height={100}
-              alt=""
-            />
-            <h2 className="font-bold text-[32px]">Getting started guide</h2>
-            <p className="text-[16px]">
-              Everything you need to know to set up your ADMS account, create
-              ponds, and start recording data.
-            </p>
-          </div>
-          <div className="flex flex-col items-start text-left w-[400px] h-[300px] p-5 border-3 border-neutral-200 rounded-2xl bg-white">
-            <Image src={"/assets/faq.svg"} width={100} height={100} alt="" />
-            <h2 className="font-bold text-[32px]">FAQs</h2>
-            <p className="text-[16px]">
-              Frequently asked questions and answers to every how to use and get
-              the best of using ADMS.
-            </p>
-          </div>
-          <div className="flex flex-col items-start text-left w-[400px] h-[300px] p-5 border-3 border-neutral-200 rounded-2xl bg-white">
-            <Image
-              src={"/assets/contact.svg"}
-              width={100}
-              height={100}
-              alt=""
-            />
-            <h2 className="font-bold text-[32px]">Contact & Helpdesk</h2>
-            <p className="text-[16px]">
-              Everything you need to know to set up your ADMS account, create
-              ponds, and start recording data.
-            </p>
-          </div>
-        </div>
-      </div>
+      </Hero>
 
       <section className="md:mt-[300px] mt-[100px] text-center">
         <div className="flex flex-col items-center gap-4 md:w-[719px] mx-auto text-center px-5">

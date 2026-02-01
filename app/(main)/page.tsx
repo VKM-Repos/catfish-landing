@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Hero>
-        <div className="relative flex flex-col md:flex-row md:items-center md:justify-center pt-12 md:h-[780px]">
+        <div className="relative flex flex-col md:flex-row md:items-center md:justify-center md:h-[780px] pt-12 md:pt-0">
           <img
             src="/assets/water_vector.svg"
             className="absolute top-0 w-[1445px] h-[500px] hidden md:block"
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="md:w-[60%] flex flex-col md:pt-14">
+          <div className="md:w-[60%] flex flex-col">
             <Image
               src={"/assets/catfish_dash.svg"}
               width={1000}
@@ -75,45 +75,45 @@ export default function Home() {
         </div>
       </Hero>
 
-      <section className="md:px-[150px] flex flex-col justify-center items-center mt-10 w-full">
-        <h2 className="text-[40px] font-bold md:w-[700px] text-center">
+      <section className="md:px-[150px] px-5 flex flex-col justify-center items-center mt-10 w-full">
+        <h2 className="text-[28px] md:text-[40px] font-bold md:w-[700px] w-full text-center px-4">
           One platform. Smarter farms. Stronger outcomes.
         </h2>
-        <div className="md:wrapper relative flex md:flex-row flex-col justify-center items-center gap-10 mt-7 w-full px-4">
-          <div className="md:w-full flex flex-col gap-5 px-5 py-7 justify-center items-start border-6 border-primary-200 rounded-[17px] overflow-x-hidden bg-[#FC80FF]">
-            <div className="max-h-[430px] md:max-h-[460px]  md:w-[650px] overflow-hidden">
+        <div className="md:wrapper relative flex md:flex-row flex-col justify-center items-stretch gap-6 md:gap-10 mt-7 w-full">
+          <div className="w-full flex flex-col gap-4 md:gap-5 px-4 md:px-5 py-5 md:py-7 justify-start items-start border-4 md:border-6 border-primary-200 rounded-[17px] overflow-hidden bg-[#FC80FF]">
+            <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg flex items-center justify-center">
               <Image
                 src={"/assets/linechart.svg"}
                 width={650}
                 height={202}
                 alt="Line chart sample"
-                className="md:w-[650px] w-full object-cover"
+                className="w-full h-full object-contain md:object-cover"
               />
             </div>
 
-            <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white">
+            <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white text-sm md:text-base">
               Sustainable
             </Button>
-            <p className="text-left text-[16px] leading-[150%] mb-2 md:w-[600px]">
+            <p className="text-left text-[14px] md:text-[16px] leading-[150%] mb-2 w-full">
               Turning data into action. Simplifies daily operations, improves
               record accuracy, and helps farmers make decisions that sustain
               productivity.
             </p>
           </div>
-          <div className="md:w-full  flex flex-col gap-5 px-5 py-7 justify-center items-start border-6 border-primary-200 rounded-[17px] overflow-x-hidden bg-[#FCCB9E]">
-            <div className="max-h-[430px] md:max-h-[460px]  md:w-[650px] overflow-hidden">
+          <div className="w-full flex flex-col gap-4 md:gap-5 px-4 md:px-5 py-5 md:py-7 justify-start items-start border-4 md:border-6 border-primary-200 rounded-[17px] overflow-hidden bg-[#FCCB9E]">
+            <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg flex items-center justify-center">
               <Image
                 src={"/assets/feat.svg"}
                 width={650}
                 height={250}
                 alt="Main Features"
-                className="max-h-[430px] md:max-h-[460px]  md:w-[650px] w-full object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
-            <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white">
+            <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white text-sm md:text-base">
               Connected
             </Button>
-            <p className="text-left text-[16px] leading-[150%] mb-2">
+            <p className="text-left text-[14px] md:text-[16px] leading-[150%] mb-2 w-full">
               Linking farmers, clusters, and institutions through live data and
               shared insights. Everyone stays aligned, informed, and able to act
               faster.

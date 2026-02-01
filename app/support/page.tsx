@@ -8,9 +8,9 @@ import { SupportCarousel } from "./components/support-carousel";
 export default function Support() {
   return (
     <div className="">
-      <Hero>
-        <div className="flex flex-col justify-center items-center text-center bg-[url(/assets/support_hero_bg.svg)] bg-center bg-cover bg-no-repeat h-[580px] w-full mx-auto rounded-b-3xl">
-          <div className="space-y-10 md:mb-[150px] mt-[120px] px-2">
+      <div className="w-full h-[602px] shrink-0 rounded-b-4xl bg-[linear-gradient(181deg,#FFF_8.49%,#F1F6F8_77.17%,#4083A2_249.31%,#D0E0E8_249.31%)]">
+        <div className="flex flex-col justify-center items-center text-center bg-[url(/assets/support_hero_bg.svg)] bg-center bg-cover bg-no-repeat h-[580px] w-full mx-auto rounded-b-3xl ">
+          <div className="space-y-10 md:mb-[150px] mt-[50px] px-">
             <div className="space-y-3">
               <h2 className="md:text-[61px] text-[40px] font-bold text-neutral-700">
                 Support Center
@@ -63,7 +63,7 @@ export default function Support() {
           </div>
           <SupportCarousel />
         </div>
-      </Hero>
+      </div>
 
       <section className="md:mt-[300px] mt-[100px] text-center">
         <div className="flex flex-col items-center gap-4 md:w-[719px] mx-auto text-center px-5">

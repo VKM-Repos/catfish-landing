@@ -128,7 +128,7 @@ export default function Home() {
         <div className="md:wrapper flex md:flex-row flex-col w-full bg-[#BFC2FF] border-6 border-primary-200 rounded-[17px] mt-[100p">
           <BeforeAfterSlider />
           <div className="md:w-[50%] flex flex-col md:items-center md:justify-center p-3">
-            <div className="md:w-[550px] md:text-center space-y-5">
+            <div className="md:text-center space-y-5">
               <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white">
                 Smarter change
               </Button>

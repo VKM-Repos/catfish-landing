@@ -49,7 +49,7 @@ export default function Home() {
               </svg>
             </Button>
             <div className="relative">
-              <div className="md:absolute md:mt-10 my-5 md:my-0 md:w-[475px] overflow-hidden">
+              <div className="md:absolute md:mt-10 my-5 md:my-0 md:w-[475px] overflow-hidden relative">
                 <div className="flex items-center gap-[33px] animate-marquee whitespace-nowrap">
                   <img src={"/assets/acp.svg"} className="inline-block" />
                   <img src={"/assets/fao.svg"} className="inline-block" />
@@ -60,6 +60,8 @@ export default function Home() {
                   <img src={"/assets/eu.svg"} className="inline-block" />
                   <img src={"/assets/german.svg"} className="inline-block" />
                 </div>
+                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-primary-100 to-transparent pointer-events-none z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-primary-100 to-transparent pointer-events-none z-10"></div>
               </div>
             </div>
           </div>

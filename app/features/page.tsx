@@ -41,11 +41,11 @@ export default function Features() {
         </div>
       </Hero>
 
-      <section className="mt-[100px]">
+      <section className="my-[100px]">
         <div className="flex md:flex-row flex-col md:items-center md:justify-between md:px-[150px] mx-5">
           <div>
             <Image
-              src={"/assets/ai_insight.svg"}
+              src={"/assets/ai.svg"}
               width={553}
               height={541}
               alt="AI Insight illustration"
@@ -58,208 +58,58 @@ export default function Features() {
               Tools that help farmers focus more on farming and less on
               paperwork.
             </p>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-2">
+            <ul className="space-y-4 md:w-[527px]">
+              <li className="flex items-start gap-2 bg-[#E5E7FF] p-2.5 rounded-lg">
                 {" "}
                 <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
+                  src={"/assets/ai_chat.svg"}
+                  width={20}
+                  height={20}
                   alt="Pointer"
                 />{" "}
-                Simple, intuitive interface built for everyday use
+                <p className="font-medium text-base">
+                  AI Chat Support
+                  <p className="font-normal">
+                    Interactive AI chat that answers questions on system usage,
+                    farm practices, and common challenges — directly within the
+                    platform.
+                  </p>
+                </p>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-start gap-2 bg-[#E5E7FF] p-2.5 rounded-lg">
                 {" "}
                 <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
+                  src={"/assets/ai_grad.svg"}
+                  width={20}
+                  height={20}
                   alt="Pointer"
                 />{" "}
-                Real-time data sync with your cluster
+                <p className="font-medium text-base">
+                  Built-In Learning Support
+                  <p className="font-normal">
+                    Provides contextual tips and explanations within modules to
+                    help users understand features without external assistance.
+                  </p>
+                </p>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-start gap-2 bg-[#E5E7FF] p-2.5 rounded-lg">
                 {" "}
                 <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
+                  src={"/assets/ai_monitor.svg"}
+                  width={20}
+                  height={20}
                   alt="Pointer"
                 />{" "}
-                Works seamlessly even in low-connectivity areas
+                <p className="font-medium text-base">
+                  User Experience Support
+                  <p className="font-normal">
+                    Helps new users navigate the system faster through guided
+                    prompts and smart suggestions during data entry.
+                  </p>
+                </p>
               </li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex md:flex-row flex-col md:items-center md:justify-between md:px-[150px] mx-5 mt-[100px] ">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Real-Time Data Collection </h2>
-            <p>
-              Tools that help farmers focus more on farming and less on
-              paperwork.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-2">
-                {" "}
-                <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
-                  alt="Pointer"
-                />{" "}
-                Simple, intuitive interface built for everyday use
-              </li>
-              <li className="flex items-center gap-2">
-                {" "}
-                <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
-                  alt="Pointer"
-                />{" "}
-                Real-time data sync with your cluster
-              </li>
-              <li className="flex items-center gap-2">
-                {" "}
-                <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
-                  alt="Pointer"
-                />{" "}
-                Works seamlessly even in low-connectivity areas
-              </li>
-            </ul>
-          </div>
-          <div>
-            <Image
-              src={"/assets/ai_insight.svg"}
-              width={553}
-              height={541}
-              alt="AI Insight illustration"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5">
-        <div className="flex justify-center mt-[100px]">
-          <Image
-            src={"/assets/manage_farm_section.svg"}
-            width={1232}
-            height={615}
-            alt="Manage Farm section"
-            className="w-[1232px] max-auto hidden md:block"
-          />
-          <div className="md:hidden">
-            <FarmSlider />
-          </div>
-        </div>
-        <div className=" md:px-[150px] flex md:flex-row flex-col md:justify-between md:items-center mt-14">
-          <div className="space-y-8">
-            <h2 className="font-bold md:text-[42px] text-[40px] md:w-[450px] w-[350px]">
-              The Aquadata Mobile App Coming Soon
-            </h2>
-            <p className="md:w-[518px] w-[353px]">
-              Smart aquaculture management, right from your phone. The ADMS
-              mobile app will make it easy for farmers and clusters to record
-              data, track performance, and stay connected — anytime, anywhere.
-            </p>
-            <ul className="space-y-5 w-[344px]">
-              <li className="flex items-center gap-3">
-                <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
-                  alt="Pointer"
-                />
-                Simple, intuitive interface built for everyday use
-              </li>
-              <li className="flex items-center gap-3">
-                <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
-                  alt="Pointer"
-                />{" "}
-                Real-time data sync with your cluster
-              </li>
-              <li className="flex items-center gap-3">
-                <Image
-                  src={"/assets/drop.svg"}
-                  width={9}
-                  height={15}
-                  alt="Pointer"
-                />{" "}
-                Works seamlessly even in low-connectivity areas
-              </li>
-            </ul>
-            <div className="flex items-center gap-5">
-              <Image
-                src={"/assets/play_store.svg"}
-                width={143}
-                height={51}
-                className="cursor-point"
-                alt="Play store"
-              />
-              <Image
-                src={"/assets/app_store.svg"}
-                width={143}
-                height={51}
-                className="cursor-point"
-                alt="App store"
-              />
-            </div>
-          </div>
-          <div className="my-[50px]">
-            <Image
-              src={"/assets/mobile_app.svg"}
-              width={518}
-              height={650}
-              alt="Mobile app sample"
-              className="md:w-[518px] md:h-[650px] w-[363px]"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="md:px-[150px] flex md:flex-row flex-col md:items-center md:justify-center md:mt-[100px] px-5">
-        <div className="md:w-[40%] h-fit sticky space-y-10">
-          <div>
-            <h2 className="font-bold text-4xl">You have got questions? </h2>
-            <h2 className="font-bold text-4xl">We’ve got answers</h2>
-          </div>
-          <p>Quick answers to help you understand how ADMS works.</p>
-          <div className="bg-primary-400 w-[296px] p-5 rounded-xl text-white space-y-2">
-            <h4 className="text-[18px] font-bold">Still have questions?</h4>
-            <p className="text-sm">Send a detailed email and we’ll help.</p>
-            <Button className="bg-neutral-800 rounded-full text-sm py-2">
-              Support
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </Button>
-          </div>
-        </div>
-        <div className="md:w-[60%]">
-          <FAQSection />
         </div>
       </section>
     </>

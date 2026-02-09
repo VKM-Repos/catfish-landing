@@ -62,18 +62,18 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-[2px] bg-neutral-800 transition-transform duration-300 ${
-              menuOpen ? "rotate-45 translate-y-[7px]" : ""
+            className={`block w-6 h-[3px] bg-[#005983] rounded-full transition-transform duration-300 ${
+              menuOpen ? "rotate-45 translate-y-[8px]" : ""
             }`}
           />
           <span
-            className={`block w-6 h-[2px] bg-neutral-800 transition-opacity duration-300 ${
+            className={`block w-6 h-[3px] bg-[#005983] rounded-full transition-opacity duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-6 h-[2px] bg-neutral-800 transition-transform duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-[7px]" : ""
+            className={`block w-6 h-[3px] bg-[#005983] rounded-full transition-transform duration-300 ${
+              menuOpen ? "-rotate-45 -translate-y-[8px]" : ""
             }`}
           />
         </button>
@@ -98,13 +98,13 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
-              <span className="block w-6 h-[2px] bg-neutral-800 rotate-45 translate-y-[3.5px]" />
-              <span className="block w-6 h-[2px] bg-neutral-800 -rotate-45 -translate-y-[3.5px]" />
+              <span className="block w-6 h-[3px] bg-[#005983] rounded-full rotate-45 translate-y-[3.5px]" />
+              <span className="block w-6 h-[3px] bg-[#005983] rounded-full -rotate-45 -translate-y-[3.5px]" />
             </button>
           </div>
 
           {/* Nav links */}
-          <ul className="flex flex-col gap-6 text-center text-2xl font-medium mt-12 px-6">
+          <ul className="flex flex-col gap-7 text-center text-base font-normal mt-12 px-6">
             <li>
               <Link href="/" onClick={() => setMenuOpen(false)}>
                 Home

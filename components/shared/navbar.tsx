@@ -12,21 +12,22 @@ export default function Navbar() {
     <nav className="pt-10 font-palanquin md:px-[150px] px-4 relative">
       <div className="flex justify-between items-center border border-neutral-200 p-3 rounded-full">
         {/* Logo */}
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image
             src="/assets/logo.svg"
             width={36}
             height={31}
             alt="ADMS logo"
+            priority
           />
           <h1 className="ml-2 text-primary-500 text-3xl font-bold">ADMS</h1>
-        </div>
+        </Link>
 
         {/* Desktop nav links */}
         <ul className="hidden md:flex justify-center gap-5 bg-[#F9F9F9] py-3 px-7 rounded-full">
-          <li>
+          {/* <li>
             <Link href="/">Home</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/features">Features</Link>
           </li>

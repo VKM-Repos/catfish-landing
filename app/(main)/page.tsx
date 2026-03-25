@@ -10,27 +10,33 @@ export default function Home() {
   return (
     <>
       <Hero>
-        <div className="relative flex flex-col md:flex-row md:items-center md:justify-center md:h-[780px] pt-12 md:pt-0">
-          <img
+        <div className="relative flex flex-col md:flex-row md:items-center md:justify-center md:min-h-[calc(100vh-80px)] md:py-20 pt-12 overflow-hidden">
+          <Image
             src="/assets/water_vector.svg"
             className="absolute top-0 w-[1445px] h-[500px] hidden md:block"
             alt=""
+            width={1445}
+            height={500}
+            priority
           />
-          <img
+          <Image
             src="/assets/water_vector.svg"
-            className="absolute bottom-0 w-[1445px] h-[px] hidden md:block"
+            className="absolute bottom-0 w-[1445px] h-[500px] hidden md:block"
             alt=""
+            width={1445}
+            height={500}
+            priority
           />
-          <div className="relative md:w-[40%] flex flex-col gap-3.5 md:ml-38 px-5">
-            <h2 className="md:text-6xl text-4xl text-primary-700 font-bold md:w-[579px] w-[355px] md:leading-16">
+          <div className="relative md:w-[45%] lg:w-[40%] flex flex-col gap-5 md:ml-20 lg:ml-32 px-5 mt-10 md:mt-0">
+            <h2 className="md:text-5xl lg:text-6xl text-4xl text-primary-700 font-bold md:w-full lg:w-[579px] w-[355px] md:leading-tight lg:leading-16">
               Empowering Aqua-culture Through Smart Data Innovation
             </h2>
-            <p className="md:w-[516px] w-[355px]">
+            <p className="md:w-full lg:w-[516px] w-[355px]">
               ADMS bridges innovation and sustainability empowering clusters,
               farmers, and development partners with real-time data that drives
               informed decisions and long-term impact.
             </p>
-            <Button className="bg-primary-500 text-white w-fit px-5 py-7 rounded-full mt-[24px]">
+            <Button className="bg-primary-500 text-white w-fit px-5 py-7 rounded-full mt-4">
               Learn More{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,36 +48,70 @@ export default function Home() {
                 <path
                   d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </Button>
-            <div className="relative">
-              <div className="md:absolute md:mt-10 my-5 md:my-0 md:w-[475px] overflow-hidden relative">
+            <div className="w-full md:w-[475px] pt-8 md:pt-12">
+              <div className="overflow-hidden relative w-full">
                 <div className="flex items-center gap-[33px] animate-marquee whitespace-nowrap">
-                  <img src={"/assets/acp.svg"} className="inline-block" />
-                  <img src={"/assets/fao.svg"} className="inline-block" />
-                  <img src={"/assets/eu.svg"} className="inline-block" />
-                  <img src={"/assets/german.svg"} className="inline-block" />
-                  <img src={"/assets/acp.svg"} className="inline-block" />
-                  <img src={"/assets/fao.svg"} className="inline-block" />
-                  <img src={"/assets/eu.svg"} className="inline-block" />
-                  <img src={"/assets/german.svg"} className="inline-block" />
+                  <img
+                    src={"/assets/acp.svg"}
+                    className="inline-block"
+                    alt="ACP"
+                  />
+                  <img
+                    src={"/assets/fao.svg"}
+                    className="inline-block"
+                    alt="FAO"
+                  />
+                  <img
+                    src={"/assets/eu.svg"}
+                    className="inline-block"
+                    alt="EU"
+                  />
+                  <img
+                    src={"/assets/german.svg"}
+                    className="inline-block"
+                    alt="German"
+                  />
+                  <img
+                    src={"/assets/acp.svg"}
+                    className="inline-block"
+                    alt="ACP"
+                  />
+                  <img
+                    src={"/assets/fao.svg"}
+                    className="inline-block"
+                    alt="FAO"
+                  />
+                  <img
+                    src={"/assets/eu.svg"}
+                    className="inline-block"
+                    alt="EU"
+                  />
+                  <img
+                    src={"/assets/german.svg"}
+                    className="inline-block"
+                    alt="German"
+                  />
                 </div>
-                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-primary-100 to-transparent pointer-events-none z-10"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-primary-100 to-transparent pointer-events-none z-10"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
               </div>
             </div>
           </div>
-          <div className="md:w-[60%] flex flex-col">
+          <div className="md:w-[55%] lg:w-[60%] flex flex-col items-center mt-10 md:mt-0">
             <Image
               src={"/assets/catfish_dash.svg"}
               width={1000}
               height={400}
+              priority
+              quality={100}
               alt="Dashboard screen"
-              className="object-cover z-10"
+              className="object-cover z-10 w-full max-w-[1000px] h-auto"
             />
           </div>
         </div>
@@ -81,41 +121,40 @@ export default function Home() {
         <h2 className="text-[28px] md:text-[40px] font-bold md:w-[700px] w-full text-center px-4">
           One platform. Smarter farms. Stronger outcomes.
         </h2>
-        <div className="md:wrapper relative flex md:flex-row flex-col justify-center items-stretch gap-6 md:gap-10 mt-7 w-full">
-          <div className="w-full flex flex-col gap-4 md:gap-5 px-4 md:px-5 py-5 md:py-7 justify-start items-start border-4 md:border-6 border-primary-200 rounded-[17px] overflow-hidden bg-[#FC80FF]">
-            <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg flex items-center justify-center">
+        <div className="w-full flex flex-col lg:flex-row items-stretch gap-8 lg:gap-10 mt-10 max-w-[1240px] mx-auto">
+          <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-[8px] border-[#E8EEF2] rounded-[32px] bg-[#FC80FF]">
+            <div className="w-full relative aspect-[4/3] xl:aspect-[5/4] rounded-2xl flex items-center justify-center overflow-hidden">
               <Image
                 src={"/assets/linechart.svg"}
-                width={650}
-                height={202}
+                fill
                 alt="Line chart sample"
-                className="w-full h-full object-contain md:object-cover"
+                className="object-contain"
               />
             </div>
 
-            <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white text-sm md:text-base">
+            <Button className="bg-[#00668F] border-none hover:bg-[#00567A] ring-4 ring-[#00668F]/30 rounded-full text-white text-sm md:text-base font-semibold px-6 py-2 h-auto mt-2 shadow-sm">
               Sustainable
             </Button>
-            <p className="text-left text-[14px] md:text-[16px] leading-[150%] mb-2 w-full">
+            <p className="text-left text-[15px] md:text-[16px] text-gray-900 leading-[1.6] w-full">
               Turning data into action. Simplifies daily operations, improves
               record accuracy, and helps farmers make decisions that sustain
               productivity.
             </p>
           </div>
-          <div className="w-full flex flex-col gap-4 md:gap-5 px-4 md:px-5 py-5 md:py-7 justify-start items-start border-4 md:border-6 border-primary-200 rounded-[17px] overflow-hidden bg-[#FCCB9E]">
-            <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg flex items-center justify-center">
+          <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-[8px] border-[#E8EEF2] rounded-[32px] bg-[#FCCB9E]">
+            <div className="w-full relative aspect-[4/3] xl:aspect-[5/4] rounded-2xl flex items-center justify-center overflow-hidden">
               <Image
                 src={"/assets/feat.svg"}
-                width={650}
-                height={250}
+                fill
                 alt="Main Features"
-                className="w-full h-full object-cover"
+                className="object-contain"
               />
             </div>
-            <Button className="bg-primary-500 border-5 border-primary-300 rounded-full text-white text-sm md:text-base">
+
+            <Button className="bg-[#00668F] border-none hover:bg-[#00567A] ring-4 ring-[#00668F]/30 rounded-full text-white text-sm md:text-base font-semibold px-6 py-2 h-auto mt-2 shadow-sm">
               Connected
             </Button>
-            <p className="text-left text-[14px] md:text-[16px] leading-[150%] mb-2 w-full">
+            <p className="text-left text-[15px] md:text-[16px] text-gray-900 leading-[1.6] w-full">
               Linking farmers, clusters, and institutions through live data and
               shared insights. Everyone stays aligned, informed, and able to act
               faster.

@@ -32,6 +32,7 @@ export default function Support() {
                 width={100}
                 height={100}
                 alt=""
+                priority
               />
               <h2 className="font-bold text-[32px]">Getting started guide</h2>
               <p className="text-[16px]">
@@ -40,7 +41,13 @@ export default function Support() {
               </p>
             </div>
             <div className="flex flex-col items-start text-left w-[400px] h-[300px] p-5 border-3 border-neutral-200 rounded-2xl bg-white">
-              <Image src={"/assets/faq.svg"} width={100} height={100} alt="" />
+              <Image
+                src={"/assets/faq.svg"}
+                width={100}
+                height={100}
+                alt=""
+                priority
+              />
               <h2 className="font-bold text-[32px]">FAQs</h2>
               <p className="text-[16px]">
                 Frequently asked questions and answers to every how to use and
@@ -53,6 +60,7 @@ export default function Support() {
                 width={100}
                 height={100}
                 alt=""
+                priority
               />
               <h2 className="font-bold text-[32px]">Contact & Helpdesk</h2>
               <p className="text-[16px]">

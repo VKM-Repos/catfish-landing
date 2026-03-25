@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
+import Image from "next/image";
 
 export default function BeforeAfterSlider() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -26,26 +27,34 @@ export default function BeforeAfterSlider() {
         onTouchEnd={() => setDragging(false)}
       >
         {/* AFTER IMAGE */}
-        <img
-          src="/assets/after.svg"
-          alt="After"
-          className="absolute inset-0 w-full h-full object-contain aspect-square pointer-events-none"
-        />
+        <div className="absolute inset-0 w-full h-full pointer-events-none">
+          <Image
+            src="/assets/after.svg"
+            alt="After"
+            fill
+            className="object-contain"
+          />
+        </div>
 
         {/* BEFORE IMAGE */}
         <div
           className="absolute inset-0 overflow-hidden border-0 border-r-4 border-[#F3F3F3]"
           style={{ width: `${position}%` }}
         >
-          <img
-            src="/assets/before.jpg"
-            alt="Before"
-            className="h-full object-cover pointer-events-none "
+          <div
+            className="absolute inset-0 pointer-events-none h-full"
             style={{
-              width: `${10000 / position}%`,
+              width: `${(100 / position) * 100}%`,
               maxWidth: "none",
             }}
-          />
+          >
+            <Image
+              src="/assets/before.jpg"
+              alt="Before"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
 
         {/* SLIDER HANDLE */}

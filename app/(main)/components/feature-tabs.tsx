@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const TABS = [
   {
@@ -35,10 +35,25 @@ const TABS = [
 
 export default function FeatureTabs() {
   const [activeTab, setActiveTab] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % TABS.length);
+    }, 5000); // changes every 5 seconds
+
+    return () => clearInterval(timer);
+  }, [isPaused]);
 
   return (
     <section className="md:wrapper mx-auto py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-center justify-center">
+      <div
+        className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-center justify-center"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div className="relative w-full transition-opacity duration-300">
           <Image
             src={TABS[activeTab].image}

@@ -9,19 +9,25 @@ export default function Features() {
   return (
     <>
       <Hero>
-        <div className="relative md:px-[150px] flex md:flex-row flex-col md:items-center md:justify-between pt-12 h-[780px]">
-          <img
+        <div className="relative md:px-[150px] flex md:flex-row flex-col md:items-center md:justify-between pt-12 min-h-[calc(100vh-80px)] md:py-20 overflow-hidden">
+          <Image
             src="/assets/water_vector.svg"
-            className="absolute top-0 w-[1445px] h-[500px] hidden md:block"
+            className="absolute top-0 right-0 w-[1445px] h-[500px] hidden md:block pointer-events-none"
             alt=""
+            width={1445}
+            height={500}
+            priority
           />
-          <img
+          <Image
             src="/assets/water_vector.svg"
-            className="absolute bottom-0 w-[1445px] h-[px] hidden md:block"
+            className="absolute bottom-0 right-0 w-[1445px] h-[500px] hidden md:block pointer-events-none"
             alt=""
+            width={1445}
+            height={500}
+            priority
           />
-          <div className="md:w-[40%] w-[353px] flex flex-col gap-3.5 px-5 md:ml-38 mb-10 md:mb-0 z-10">
-            <h2 className="md:text-6xl text-3xl text-primary-700 font-bold md:w-[579px] md:leading-16">
+          <div className="relative md:w-[40%] w-[353px] flex flex-col gap-3.5 px-5 md:ml-38 mb-10 md:mt-0 z-10 lg:pl-[120px] xl:pl-[150px]">
+            <h2 className="md:text-5xl lg:text-[64px] text-3xl text-primary-700 font-bold md:w-[579px] md:leading-[1.15]">
               Built to Simplify, Connect, and Grow Aquaculture
             </h2>
             <p className="md:w-[516px]">
@@ -31,13 +37,17 @@ export default function Features() {
               policymakers alike.
             </p>
           </div>
-          <Image
-            src={"/assets/feature_hero.svg"}
-            width={553}
-            height={541}
-            alt="Dashboard screen"
-            className="object-cover"
-          />
+          <div className="relative z-10 w-full lg:w-[55%] flex justify-end mt-12 lg:mt-0 px-5 flex-shrink-0">
+            <Image
+              src={"/assets/feature_hero.svg"}
+              width={553}
+              height={541}
+              priority
+              quality={100}
+              alt="Dashboard screen"
+              className="object-cover w-full h-auto max-w-[553px]"
+            />
+          </div>
         </div>
       </Hero>
 

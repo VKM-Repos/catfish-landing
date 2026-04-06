@@ -29,7 +29,7 @@ export default function Footer() {
                 alt="ADMS logo"
               />
             </a>
-            <div className="w-[400px] pt-8 md:pt-12 overflow-x-auto no-scrollbar flex">
+            <div className="md:w-[400px] w-full pt-8 md:pt-12 overflow-x-auto no-scrollbar flex mb-4">
               <div className="relative w-full flex">
                 <div className="group-marquee">
                   <img

@@ -37,7 +37,7 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <Button className="bg-primary-800 text-white text-base font-normal rounded-full py-6 hidden md:flex items-center justify-center gap-2">
+        <Button className="bg-primary-500 text-white text-base font-normal rounded-full py-6 hidden md:flex items-center justify-center gap-2">
           Get App
           <svg
             xmlns="http://www.w3.org/2000/svg"

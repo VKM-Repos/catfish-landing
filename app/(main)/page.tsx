@@ -6,10 +6,11 @@ import Image from "next/image";
 import BeforeAfterSlider from "./components/slider";
 import FeatureTabs from "./components/feature-tabs";
 import { FarmSlider } from "@/components/shared/farm-slider";
-import { motion } from "motion/react";
 import { FadeInSection } from "@/components/ui/FadeInSection";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <FadeInSection>
@@ -40,7 +41,10 @@ export default function Home() {
                 farmers, and development partners with real-time data that
                 drives informed decisions and long-term impact.
               </p>
-              <Button className="bg-primary-500 text-white w-fit px-5 py-7 rounded-full mt-4">
+              <Button
+                className="bg-primary-500 text-white w-fit px-5 py-7 rounded-full mt-4"
+                onClick={() => router.push("/features")}
+              >
                 Learn More{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,52 +62,54 @@ export default function Home() {
                   />
                 </svg>
               </Button>
-              <div className="w-full md:w-[475px] pt-8 md:pt-12">
-                <div className="overflow-hidden relative w-full">
-                  <div className="flex items-center gap-[33px] animate-marquee whitespace-nowrap">
+              <div className="w-full pt-8 md:pt-12 overflow-x-auto no-scrollbar flex">
+                <div className="relative w-full flex">
+                  <div className="group-marquee">
                     <img
                       src={"/assets/acp.svg"}
-                      className="inline-block"
+                      className="inline-block flex-none basis-30 w-10 h-10"
                       alt="ACP"
                     />
                     <img
                       src={"/assets/fao.svg"}
-                      className="inline-block"
+                      className="inline-block flex-none basis-30 w-10 h-10"
                       alt="FAO"
                     />
                     <img
                       src={"/assets/eu.svg"}
-                      className="inline-block"
+                      className="inline-block flex-none basis-30 w-10 h-10"
                       alt="EU"
                     />
                     <img
                       src={"/assets/german.svg"}
-                      className="inline-block"
-                      alt="German"
-                    />
-                    <img
-                      src={"/assets/acp.svg"}
-                      className="inline-block"
-                      alt="ACP"
-                    />
-                    <img
-                      src={"/assets/fao.svg"}
-                      className="inline-block"
-                      alt="FAO"
-                    />
-                    <img
-                      src={"/assets/eu.svg"}
-                      className="inline-block"
-                      alt="EU"
-                    />
-                    <img
-                      src={"/assets/german.svg"}
-                      className="inline-block"
+                      className="inline-block flex-none basis-30 w-10 h-10"
                       alt="German"
                     />
                   </div>
-                  <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
-                  <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
+                  <div className="group-marquee">
+                    <img
+                      src={"/assets/acp.svg"}
+                      className="inline-block flex-none basis-30 w-10 h-10"
+                      alt="ACP"
+                    />
+                    <img
+                      src={"/assets/fao.svg"}
+                      className="inline-block flex-none basis-30 w-10 h-10"
+                      alt="FAO"
+                    />
+                    <img
+                      src={"/assets/eu.svg"}
+                      className="inline-block flex-none basis-30 w-10 h-10"
+                      alt="EU"
+                    />
+                    <img
+                      src={"/assets/german.svg"}
+                      className="inline-block flex-none basis-30 w-10 h-10"
+                      alt="German"
+                    />
+                  </div>
+                  <div className="absolute left-0 top-0 bottom-0 w-36 bg-gradient-to-r from-white/30 to-transparent pointer-events-none z-10" />
+                  <div className="absolute right-0 top-0 bottom-0 w-36 bg-gradient-to-l from-white/30 to-transparent pointer-events-none z-10" />
                 </div>
               </div>
             </div>
@@ -127,8 +133,8 @@ export default function Home() {
           <h2 className="text-[28px] md:text-[40px] font-bold md:w-[700px] w-full text-center px-4">
             One platform. Smarter farms. Stronger outcomes.
           </h2>
-          <div className="w-full flex flex-col lg:flex-row items-stretch gap-8 lg:gap-10 mt-10 max-w-[1240px] mx-auto">
-            <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-[8px] border-[#E8EEF2] rounded-[32px] bg-[#FC80FF]">
+          <div className="w-full flex flex-col lg:flex-row items-stretch gap-8 lg:gap-10 mt-10 mx-auto">
+            <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-5 border-[#E8EEF2] rounded-[32px]">
               <div className="w-full relative aspect-[4/3] xl:aspect-[5/4] rounded-2xl flex items-center justify-center overflow-hidden">
                 <Image
                   src={"/assets/linechart.svg"}
@@ -147,7 +153,7 @@ export default function Home() {
                 productivity.
               </p>
             </div>
-            <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-[8px] border-[#E8EEF2] rounded-[32px] bg-[#FCCB9E]">
+            <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-5 border-[#E8EEF2] rounded-4xl">
               <div className="w-full relative aspect-[4/3] xl:aspect-[5/4] rounded-2xl flex items-center justify-center overflow-hidden">
                 <Image
                   src={"/assets/feat.svg"}
@@ -171,8 +177,8 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="mt-[100px] mx-3 md:px-[150px]">
-          <div className="md:wrapper flex md:flex-row flex-col w-full bg-[#BFC2FF] border-6 border-primary-200 rounded-[17px] mt-[100p">
+        <section className="md:px-[150px] px-5 mt-10 w-full">
+          <div className="md:wrapper flex md:flex-row flex-col w-full border-5 border-[#E8EEF2] rounded-[17px] mt-10">
             <BeforeAfterSlider />
             <div className="md:w-[50%] flex flex-col md:items-center md:justify-center p-3">
               <div className="md:text-center space-y-5">
@@ -190,7 +196,7 @@ export default function Home() {
         </section>
       </FadeInSection>
       <FadeInSection>
-        <section className="md:bg-[url(/assets/rectangle.svg)] bg-[url(/assets/mobile_rectangle.svg)] bg-no-repeat bg-cover md:h-[1480px] h-[1048px] flex flex-col items-center justify-center mt-[100px]">
+        <section className="md:bg-[url(/assets/rectangle.svg)] bg-[url(/assets/mobile_rectangle.svg)] bg-no-repeat bg-cover md:h-[1480px] h-[1048px] flex flex-col items-center justify-center mt-12">
           <div className="flex flex-col gap-4 justify-center items-center mx-auto md:w-[695px] w-[353px] md:-mt-[200px]">
             <h2 className="font-bold text-[40px] text-center">
               Key Features of ADMS
@@ -200,7 +206,10 @@ export default function Home() {
               connected system from field data collection to production
               tracking, financial insights, and real-time reporting.
             </p>
-            <Button className="bg-primary-500 text-white rounded-full py-7 px-5">
+            <Button
+              className="bg-primary-500 text-white rounded-full py-7 px-5"
+              onClick={() => router.push("/features")}
+            >
               Discover all features{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -306,7 +315,7 @@ export default function Home() {
       </FadeInSection>
       <FadeInSection>
         <section className="md:px-[150px] flex md:flex-row flex-col md:items-start md:justify-center md:mt-[100px] px-5 gap-8">
-          <div className="md:w-[40%] h-fit md:sticky md:top-20 space-y-10 flex-shrink-0">
+          <div className="md:w-[40%] h-fit md:sticky md:top-20 space-y-10 shrink-0">
             <div>
               <h2 className="font-bold text-4xl">You have got questions? </h2>
               <h2 className="font-bold text-4xl">We’ve got answers</h2>
@@ -315,7 +324,10 @@ export default function Home() {
             <div className="bg-primary-400 w-[296px] p-5 rounded-xl text-white space-y-2">
               <h4 className="text-[18px] font-bold">Still have questions?</h4>
               <p className="text-sm">Send a detailed email and we’ll help.</p>
-              <Button className="bg-neutral-800 rounded-full text-sm py-2">
+              <Button
+                className="bg-primary-500 rounded-full text-sm py-2"
+                onClick={() => router.push("/support")}
+              >
                 Support
                 <svg
                   width="24"
@@ -335,7 +347,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="md:w-[60%] flex-shrink-0">
+          <div className="md:w-[60%] shrink-0">
             <FAQSection />
           </div>
         </section>

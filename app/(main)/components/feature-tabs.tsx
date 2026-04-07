@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const TABS = [
   {
@@ -36,6 +36,7 @@ const TABS = [
 export default function FeatureTabs() {
   const [activeTab, setActiveTab] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isPaused) return;
@@ -47,8 +48,50 @@ export default function FeatureTabs() {
     return () => clearInterval(timer);
   }, [isPaused]);
 
+  useEffect(() => {
+    let accumulated = 0;
+    const THRESHOLD = 100; // total scroll units needed to advance a tab
+
+    const handleWheel = (e: WheelEvent) => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const { top, bottom } = container.getBoundingClientRect();
+      const isInView = top < window.innerHeight && bottom > 0;
+      if (!isInView) return;
+
+      if (e.deltaY > 0 && activeTab < TABS.length - 1) {
+        e.preventDefault();
+        accumulated += e.deltaY;
+
+        if (accumulated >= THRESHOLD) {
+          accumulated = 0; // reset after advancing
+          setActiveTab((prev) => prev + 1);
+        }
+      }
+
+      if (e.deltaY < 0 && activeTab > 0) {
+        e.preventDefault();
+        accumulated += e.deltaY; // deltaY is negative when scrolling up
+
+        if (accumulated <= -THRESHOLD) {
+          accumulated = 0;
+          setActiveTab((prev) => prev - 1);
+        }
+      }
+
+      // reset accumulation if they stop mid-scroll
+      if (activeTab >= TABS.length - 1 && e.deltaY > 0) {
+        accumulated = 0;
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, [activeTab]);
+
   return (
-    <section className="md:wrapper mx-auto py-16">
+    <div className="md:wrapper mx-auto py-16" ref={containerRef}>
       <div
         className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-center justify-center"
         onMouseEnter={() => setIsPaused(true)}
@@ -56,10 +99,10 @@ export default function FeatureTabs() {
       >
         <div className="relative w-full transition-opacity duration-300">
           <Image
-            src={TABS[activeTab].image}
+            src={TABS[activeTab]?.image}
             width={780}
             height={443}
-            alt={TABS[activeTab].title}
+            alt={TABS[activeTab]?.title}
             className="md:w-[780px] w-[450px] object-cover"
           />
         </div>
@@ -96,6 +139,6 @@ export default function FeatureTabs() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

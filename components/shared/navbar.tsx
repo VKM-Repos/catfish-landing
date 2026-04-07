@@ -36,25 +36,25 @@ export default function Navbar() {
 					</li>
 				</ul>
 
-				{/* Desktop CTA */}
-				<Button className="bg-primary-800 text-white text-base font-normal rounded-full py-6 hidden md:flex items-center justify-center gap-2">
-					Get App
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="14"
-						height="14"
-						viewBox="0 0 14 14"
-						fill="none"
-					>
-						<path
-							d="M0.75 12.75L3.25 10.25M12.75 0.75H3.75M12.75 0.75V9.75M12.75 0.75L6.25 7.25"
-							stroke="white"
-							strokeWidth="1.5"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-						/>
-					</svg>
-				</Button>
+        {/* Desktop CTA */}
+        <Button className="bg-primary-500 text-white text-base font-normal rounded-full py-6 hidden md:flex items-center justify-center gap-2">
+          Get App
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+          >
+            <path
+              d="M0.75 12.75L3.25 10.25M12.75 0.75H3.75M12.75 0.75V9.75M12.75 0.75L6.25 7.25"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Button>
 
 				{/* Hamburger button (mobile) */}
 				<button

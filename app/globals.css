@@ -180,10 +180,24 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
-.animate-marquee {
-  animation: marquee 5s linear infinite;
+.group-marquee{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation:marquee 5s infinite linear;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

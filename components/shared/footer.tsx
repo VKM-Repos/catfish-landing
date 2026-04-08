@@ -18,17 +18,7 @@ export default function Footer() {
               <h1 className="text-3xl font-bold">ADMS</h1>
             </div>
             <p>Aquadata Management System. </p>
-            {/* <a
-              href="https://youtube.com/@viableknowledgemasters9397?si=m-W_ljK3o34Jp_nb"
-              target="_blank"
-            >
-              <Image
-                src="/assets/youtube.svg"
-                width={36}
-                height={31}
-                alt="ADMS logo"
-              />
-            </a> */}
+
             <div className="md:w-[400px] w-full pt-8 md:pt-12 overflow-x-auto no-scrollbar flex mb-4">
               <div className="relative w-full flex">
                 <div className="group-marquee">
@@ -108,7 +98,7 @@ export default function Footer() {
                 </li>
                 <li className="hover:underline">
                   <Link href="mailto:adms@viableknowledgemasters.com">
-                    Help center
+                    Send a mail
                   </Link>
                 </li>
                 <li className="hover:underline">
@@ -116,7 +106,7 @@ export default function Footer() {
                     href="https://forms.gle/vtjPMuaKfXntfsqu6"
                     target="_blank"
                   >
-                    Talk to support
+                    Submit a report
                   </Link>
                 </li>
               </ul>

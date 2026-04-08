@@ -1,6 +1,6 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
               <h1 className="text-3xl font-bold">ADMS</h1>
             </div>
             <p>Aquadata Management System. </p>
-            <a
+            {/* <a
               href="https://youtube.com/@viableknowledgemasters9397?si=m-W_ljK3o34Jp_nb"
               target="_blank"
             >
@@ -28,7 +28,7 @@ export default function Footer() {
                 height={31}
                 alt="ADMS logo"
               />
-            </a>
+            </a> */}
             <div className="md:w-[400px] w-full pt-8 md:pt-12 overflow-x-auto no-scrollbar flex mb-4">
               <div className="relative w-full flex">
                 <div className="group-marquee">
@@ -53,7 +53,7 @@ export default function Footer() {
                     alt="German"
                   />
                 </div>
-                <div className="group-marquee">
+                <div className="group-marquee aria-hidden:hidden">
                   <img
                     src={"/assets/acp.svg"}
                     className="inline-block flex-none basis-20 w-10 h-10"
@@ -78,7 +78,28 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex mr-10">
+          <div className="flex mr-10 gap-4 justify-between">
+            <div className="flex flex-col">
+              <h2 className="font-bold">Quick links</h2>
+              <ul className="text-sm space-y-2 mt-3">
+                <li className="hover:underline">
+                  <Link
+                    href="/"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="hover:underline">
+                  <Link href="/features">Features</Link>
+                </li>
+                <li className="hover:underline">
+                  <Link href="/">Clusters</Link>
+                </li>
+              </ul>
+            </div>
             <div className="flex flex-col">
               <h2 className="font-bold">Support</h2>
               <ul className="text-sm space-y-2 mt-3">

@@ -8,7 +8,6 @@ import FeatureTabs from "./components/feature-tabs";
 import { FarmSlider } from "@/components/shared/farm-slider";
 import { FadeInSection } from "@/components/ui/FadeInSection";
 import { useRouter } from "next/navigation";
-import { Link } from "lucide-react";
 
 export default function Home() {
   const router = useRouter();

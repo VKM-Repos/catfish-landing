@@ -86,7 +86,7 @@ export default function Home() {
                       alt="German"
                     />
                   </div>
-                  <div className="group-marquee">
+                  <div className="group-marquee aria-hidden:hidden">
                     <img
                       src={"/assets/acp.svg"}
                       className="inline-block flex-none basis-30 w-10 h-10"
@@ -285,20 +285,30 @@ export default function Home() {
                 </li>
               </ul>
               <div className="flex items-center gap-5">
-                <Image
-                  src={"/assets/play_store.svg"}
-                  width={143}
-                  height={51}
-                  className="cursor-point"
-                  alt="Play store"
-                />
-                <Image
-                  src={"/assets/app_store.svg"}
-                  width={143}
-                  height={51}
-                  className="cursor-point"
-                  alt="App store"
-                />
+                <Button
+                  onClick={() => router.push("/coming-soon")}
+                  variant={"ghost"}
+                  className="cursor-pointer"
+                >
+                  <Image
+                    src={"/assets/play_store.svg"}
+                    width={143}
+                    height={51}
+                    alt="Play store"
+                  />
+                </Button>
+                <Button
+                  onClick={() => router.push("/coming-soon")}
+                  variant={"ghost"}
+                  className="cursor-pointer"
+                >
+                  <Image
+                    src={"/assets/app_store.svg"}
+                    width={143}
+                    height={51}
+                    alt="App store"
+                  />
+                </Button>
               </div>
             </div>
             <div className="my-[50px]">
@@ -315,7 +325,7 @@ export default function Home() {
       </FadeInSection>
       <FadeInSection>
         <section className="md:px-[150px] flex md:flex-row flex-col md:items-start md:justify-center md:mt-[100px] px-5 gap-8">
-          <div className="md:w-[40%] h-fit md:sticky md:top-20 space-y-10 shrink-0">
+          <div className="md:w-[40%] h-fit md:top-20 space-y-10 shrink-0">
             <div>
               <h2 className="font-bold text-4xl">You have got questions? </h2>
               <h2 className="font-bold text-4xl">We’ve got answers</h2>

@@ -137,10 +137,10 @@ export default function Support() {
           </p>
         </div>
         <div className="flex md:flex-row flex-col items-center md:justify-center gap-10 mt-10">
-          {!isClient ? null : videos.length === 0 ? (
+          {!isClient ? null : videos?.length === 0 ? (
             <p className="text-neutral-400">Loading videos...</p>
           ) : (
-            videos.map((video: any, k: number) => (
+            videos?.map((video: any, k: number) => (
               <SupportCard
                 title={video.snippet.title}
                 description={video.snippet.description}

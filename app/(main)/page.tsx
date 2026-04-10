@@ -141,6 +141,7 @@ export default function Home() {
                   fill
                   alt="Line chart sample"
                   className="object-contain"
+                  priority
                 />
               </div>
 
@@ -160,6 +161,7 @@ export default function Home() {
                   fill
                   alt="Main Features"
                   className="object-contain"
+                  priority
                 />
               </div>
 
@@ -240,6 +242,7 @@ export default function Home() {
               height={615}
               alt="Manage Farm section"
               className="w-[1232px] max-auto hidden md:block"
+              priority
             />
             <div className="md:hidden">
               <FarmSlider />
@@ -262,6 +265,7 @@ export default function Home() {
                     width={9}
                     height={15}
                     alt="Pointer"
+                    priority
                   />
                   Simple, intuitive interface built for everyday use
                 </li>
@@ -271,6 +275,7 @@ export default function Home() {
                     width={9}
                     height={15}
                     alt="Pointer"
+                    priority
                   />{" "}
                   Real-time data sync with your cluster
                 </li>
@@ -280,6 +285,7 @@ export default function Home() {
                     width={9}
                     height={15}
                     alt="Pointer"
+                    priority
                   />{" "}
                   Works seamlessly even in low-connectivity areas
                 </li>
@@ -307,6 +313,7 @@ export default function Home() {
                     width={143}
                     height={51}
                     alt="App store"
+                    priority
                   />
                 </Button>
               </div>
@@ -318,6 +325,7 @@ export default function Home() {
                 height={650}
                 alt="Mobile app sample"
                 className="md:w-[518px] md:h-[650px] w-[363px]"
+                priority
               />
             </div>
           </div>

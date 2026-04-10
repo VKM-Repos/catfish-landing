@@ -37,6 +37,7 @@ export default function ComingSoon() {
         height={492}
         className="self-center mt-10"
         alt="Mobile app preview"
+        priority
       />
 
       <p>

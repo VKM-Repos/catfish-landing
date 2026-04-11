@@ -40,7 +40,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <Button
-          className="bg-primary-500 text-white text-base font-normal rounded-full py-6 hidden md:flex items-center justify-center gap-2"
+          className="bg-primary-500 text-white text-base font-normal rounded-full py-6 hidden md:flex items-center justify-center gap-2 cursor-pointer"
           onClick={() => router.push("/coming-soon")}
         >
           Get App

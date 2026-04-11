@@ -8,6 +8,8 @@ import FeatureTabs from "./components/feature-tabs";
 import { FarmSlider } from "@/components/shared/farm-slider";
 import { FadeInSection } from "@/components/ui/FadeInSection";
 import { useRouter } from "next/navigation";
+import PlayStoreButton from "@/components/ui/PlayStoreButton";
+import ManageFarmSection from "./components/ManageFarmSection";
 
 export default function Home() {
   const router = useRouter();
@@ -236,14 +238,7 @@ export default function Home() {
       <FadeInSection>
         <section className="px-5">
           <div className="flex justify-center mt-[100px]">
-            <Image
-              src={"/assets/manage_farm_section.svg"}
-              width={1232}
-              height={615}
-              alt="Manage Farm section"
-              className="w-[1232px] max-auto hidden md:block"
-              priority
-            />
+            <ManageFarmSection />
             <div className="md:hidden">
               <FarmSlider />
             </div>
@@ -291,31 +286,16 @@ export default function Home() {
                 </li>
               </ul>
               <div className="flex items-center gap-5">
-                <Button
-                  onClick={() => router.push("/coming-soon")}
-                  variant={"ghost"}
-                  className="cursor-pointer"
-                >
-                  <Image
-                    src={"/assets/play_store.svg"}
-                    width={143}
-                    height={51}
-                    alt="Play store"
-                  />
-                </Button>
-                <Button
-                  onClick={() => router.push("/coming-soon")}
-                  variant={"ghost"}
-                  className="cursor-pointer"
-                >
-                  <Image
-                    src={"/assets/app_store.svg"}
-                    width={143}
-                    height={51}
-                    alt="App store"
-                    priority
-                  />
-                </Button>
+                <PlayStoreButton
+                  link="/coming-soon"
+                  image="/assets/google_play_icon.svg"
+                  text="Play Store"
+                />
+                <PlayStoreButton
+                  link="/coming-soon"
+                  image="/assets/apple_play_icon.svg"
+                  text="App Store"
+                />
               </div>
             </div>
             <div className="my-[50px]">

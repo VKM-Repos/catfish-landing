@@ -1,9 +1,13 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import PlayStoreButton from "@/components/ui/PlayStoreButton";
 import Image from "next/image";
-import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function ComingSoon() {
+  const router = useRouter();
   return (
-    <div className="relative pb-10 ">
+    <div className="relative pb-10">
       <Image
         src="/assets/Edge_bg.svg"
         width={405}
@@ -20,7 +24,7 @@ export default function ComingSoon() {
         className="absolute bottom-0 right-0 z-10 opacity-50 scale-x-[-1]"
         priority
       />
-      <div className="flex justify-center px-5 text-center mt-20 flex-col md:w-[80%] mx-auto gap-5 ">
+      <div className="flex justify-center px-5 text-center mt-20 flex-col md:w-[80%] mx-auto gap-5">
         <h1 className="md:text-6xl font-medium text-3xl">
           ADMS <span className="text-primary-500 ">Mobile APP </span> is Almost
           Here
@@ -33,19 +37,15 @@ export default function ComingSoon() {
         </p>
         <p className="font-medium text-xl">Launching soon. Stay connected.</p>
         <div className="flex self-center gap-5">
-          <Image
-            src={"/assets/play_store.svg"}
-            width={143}
-            height={51}
-            className="cursor-point"
-            alt="Play store"
+          <PlayStoreButton
+            link="/coming-soon"
+            image="/assets/google_play_icon.svg"
+            text="Play Store"
           />
-          <Image
-            src={"/assets/app_store.svg"}
-            width={143}
-            height={51}
-            className="cursor-point"
-            alt="App store"
+          <PlayStoreButton
+            link="/coming-soon"
+            image="/assets/apple_play_icon.svg"
+            text="App Store"
           />
         </div>
         <Image

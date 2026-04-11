@@ -39,75 +39,60 @@ export default function PrivacyPolicy() {
 			<div className="relative w-full flex items-center py-16 md:py-0 md:h-[520px]">
 				{/* Shield — desktop only */}
 				<Image
-					src="/assets/shield_keyhole.svg"
+					src="/assets/contract.svg"
 					width={231}
 					height={300}
 					alt="Privacy shield"
-					className="absolute right-[200px] top-1/2 -translate-y-1/2 hidden md:block"
+					className="absolute right-[300px] top-1/2 -translate-y-1/2 hidden md:block w-[350px]"
 				/>
 
 				{/* Text */}
-				<div className="relative z-10 px-5 md:px-[150px] w-full md:max-w-[680px]">
-					<h1 className="text-[40px] md:text-[56px] font-bold text-neutral-800 mb-4 md:mb-5 leading-tight">
-						Privacy Policy
+				<div className="relative z-10 px-5 md:px-[150px] w-full">
+					<h1 className="text-[40px] md:text-[56px]  font-bold text-neutral-800 mb-4 md:mb-5 leading-tight">
+						TERMS & CONDITIONS
 					</h1>
 					<p className="text-sm md:text-base text-neutral-600 leading-relaxed md:w-[480px]">
-						The Aquadata Management System (ADMS) is committed to protecting the
-						privacy and security of all users. This policy explains how data is
-						collected, used, and protected within the platform.
+						By using the ADMS platform, you agree to the following terms
+						governing access, data usage, and responsibilities.
 					</p>
 				</div>
 			</div>
 
-			{/* Policy content */}
-			<section className="px-5 md:px-[150px] py-10 md:py-16 md:max-w-[800px]">
+			{/* terms and condition content */}
+			<section className="px-5 md:px-[150px] md:max-w-[800px]">
 				<div className="space-y-8 md:space-y-10 text-neutral-700">
 					{/* 1 */}
 					<div className="space-y-2 md:space-y-3">
 						<h2 className="text-lg md:text-xl font-bold text-neutral-800">
-							1. Information We Collect
+							1. Use of the Platform
 						</h2>
 						<p className="text-sm md:text-base leading-relaxed">
-							ADMS collects information necessary for aquaculture management,
-							including: User details (name, phone number, role)
+							ADMS is designed to support aquaculture data management. Users are
+							expected to use the platform responsibly and for its intended
+							purpose.
 						</p>
-						<ul className="space-y-1 text-sm md:text-base leading-relaxed ml-1">
-							<li className="flex items-start gap-2">
-								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								Farm and pond information
-							</li>
-							<li className="flex items-start gap-2">
-								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								Production data (feeding, sampling, harvest, etc.)
-							</li>
-							<li className="flex items-start gap-2">
-								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								Financial and operational records
-							</li>
-						</ul>
 					</div>
 
 					{/* 2 */}
 					<div className="space-y-2 md:space-y-3">
 						<h2 className="text-lg md:text-xl font-bold text-neutral-800">
-							2. How We Collect Data
+							2. User Responsibilities
 						</h2>
 						<p className="text-sm md:text-base leading-relaxed">
-							Data is collected through:
+							Users agree to:
 						</p>
 						<ul className="space-y-1 text-sm md:text-base leading-relaxed ml-1">
 							<li className="flex items-start gap-2">
 								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								The ADMS web platform
+								Provide accurate and complete information
 							</li>
 							<li className="flex items-start gap-2">
 								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								The ADMS mobile application
+								Use the platform only for legitimate farm and cluster activities
 							</li>
 							<li className="flex items-start gap-2">
 								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								Inputs provided by farmers, cluster managers, and field
-								facilitators
+								Avoid any misuse, manipulation, or falsification of data
 							</li>
 						</ul>
 					</div>
@@ -115,27 +100,18 @@ export default function PrivacyPolicy() {
 					{/* 3 */}
 					<div className="space-y-2 md:space-y-3">
 						<h2 className="text-lg md:text-xl font-bold text-neutral-800">
-							3. How We Use Information
+							3. Data Ownership &amp; Access
 						</h2>
-						<p className="text-sm md:text-base leading-relaxed">
-							The data collected is used to:
-						</p>
 						<ul className="space-y-1 text-sm md:text-base leading-relaxed ml-1">
 							<li className="flex items-start gap-2">
 								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								Track farm and cluster performance
+								Data entered into ADMS remains associated with the respective
+								farm or cluster.
 							</li>
 							<li className="flex items-start gap-2">
 								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								Generate reports and analytics
-							</li>
-							<li className="flex items-start gap-2">
-								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								Support decision-making and planning
-							</li>
-							<li className="flex items-start gap-2">
-								<span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-neutral-700 shrink-0" />
-								Improve aquaculture productivity and sustainability
+								Access to this data is limited to authorized users and project
+								partners only.
 							</li>
 						</ul>
 					</div>
@@ -143,60 +119,51 @@ export default function PrivacyPolicy() {
 					{/* 4 */}
 					<div className="space-y-2 md:space-y-3">
 						<h2 className="text-lg md:text-xl font-bold text-neutral-800">
-							4. Data Access &amp; Sharing
+							4. Data Privacy &amp; Protection
 						</h2>
 						<p className="text-sm md:text-base leading-relaxed">
-							Access to data is restricted to authorized personnel only,
-							including designated administrators and project partners.
+							User data is handled securely and is not abused or misused.
 						</p>
 						<p className="text-sm md:text-base leading-relaxed">
-							Data is shared only with FAO and approved project partners for
-							program implementation and analysis.
+							Data is shared strictly with FAO and relevant project partners for
+							operational and analytical purposes.
 						</p>
 						<p className="text-sm md:text-base leading-relaxed">
 							ADMS does not share user data with government bodies or
-							unauthorized third parties.
+							unauthorized entities.
 						</p>
 					</div>
 
 					{/* 5 */}
 					<div className="space-y-2 md:space-y-3">
 						<h2 className="text-lg md:text-xl font-bold text-neutral-800">
-							5. Data Protection
+							5. System Availability
 						</h2>
 						<p className="text-sm md:text-base leading-relaxed">
-							We implement appropriate technical and organizational measures to
-							protect user data from unauthorized access, loss, or misuse.
+							While ADMS aims to provide reliable access, occasional downtime
+							may occur due to maintenance or technical issues.
 						</p>
 					</div>
 
 					{/* 6 */}
 					<div className="space-y-2 md:space-y-3">
 						<h2 className="text-lg md:text-xl font-bold text-neutral-800">
-							6. User Responsibility
+							6. Limitation of Liability
 						</h2>
 						<p className="text-sm md:text-base leading-relaxed">
-							Users are responsible for ensuring that the data they provide is
-							accurate and up to date.
-						</p>
-						<p className="text-sm md:text-base leading-relaxed">
-							For questions or concerns regarding this policy, please contact:
-							<br />
-							support@adms.ng
-							<br />
-							(or your preferred email)
+							ADMS is a support tool for data management. Users remain
+							responsible for decisions made based on the data provided.
 						</p>
 					</div>
 
 					{/* 7 */}
 					<div className="space-y-2 md:space-y-3">
 						<h2 className="text-lg md:text-xl font-bold text-neutral-800">
-							7. Contact
+							7. Updates to Terms
 						</h2>
 						<p className="text-sm md:text-base leading-relaxed">
-							For questions or concerns regarding this policy, please contact:
-							<br />
-							support@adms.ng
+							These terms may be updated as the system evolves. Continued use of
+							ADMS indicates acceptance of any changes.
 						</p>
 					</div>
 				</div>

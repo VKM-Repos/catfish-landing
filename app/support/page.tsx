@@ -10,6 +10,13 @@ import { useRouter } from "next/navigation";
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "";
 const PLAYLIST_ID = process.env.NEXT_PUBLIC_PLAYLIST_ID || "";
 
+interface SupportNavCardProps {
+  icon: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
 export default function Support() {
   const [videos, setVideos] = useState([]);
   const [isClient, setIsClient] = useState(false);
@@ -59,6 +66,28 @@ export default function Support() {
       </div>
     </Link>
   );
+
+  const SupportNavCard = ({
+    icon,
+    title,
+    description,
+    href,
+  }: SupportNavCardProps) => {
+    return (
+      <Link
+        href={href}
+        className="group flex flex-col items-start text-left w-[400px] h-80 p-5 overflow-hidden border-3 border-neutral-200 rounded-2xl bg-white transition-all duration-300 ease-in-out hover:scale-105"
+      >
+        <div className="mb-4 transition-transform duration-300 group-hover:-translate-y-1">
+          <Image src={icon} width={100} height={100} alt={title} priority />
+        </div>
+        <h2 className="font-bold text-[32px] text-neutral-700 transition-colors group-hover:text-primary-600">
+          {title}
+        </h2>
+        <p className="text-[16px] text-neutral-600 mt-2">{description}</p>
+      </Link>
+    );
+  };
   return (
     <div className="flex flex-col gap-20 md:gap-0">
       <div className="w-full h-[602px] shrink-0 rounded-b-4xl bg-[linear-gradient(181deg,#FFF_8.49%,#F1F6F8_77.17%,#4083A2_249.31%,#D0E0E8_249.31%)]">
@@ -79,48 +108,26 @@ export default function Support() {
             </p>
           </div>
           <div className="md:flex items-center  gap-10 hidden absolute top-150 w-full justify-center px-2">
-            <div className="flex flex-col items-start text-left w-[400px] h-80 p-5 overflow-hidden border-3 border-neutral-200 rounded-2xl bg-white ">
-              <Image
-                src={"/assets/started.svg"}
-                width={100}
-                height={100}
-                alt=""
-                priority
-              />
-              <h2 className="font-bold text-[32px]">Getting started guide</h2>
-              <p className="text-[16px]">
-                Everything you need to know to set up your ADMS account, create
-                ponds, and start recording data.
-              </p>
-            </div>
-            <div className="flex flex-col items-start text-left w-[400px] h-80 p-5 overflow-hidden border-3 border-neutral-200 rounded-2xl bg-white">
-              <Image
-                src={"/assets/faq.svg"}
-                width={100}
-                height={100}
-                alt=""
-                priority
-              />
-              <h2 className="font-bold text-[32px]">FAQs</h2>
-              <p className="text-[16px]">
-                Frequently asked questions and answers to every how to use and
-                get the best of using ADMS.
-              </p>
-            </div>
-            <div className="flex flex-col items-start text-left w-[400px] h-80 p-5 overflow-hidden border-3 border-neutral-200 rounded-2xl bg-white">
-              <Image
-                src={"/assets/contact.svg"}
-                width={100}
-                height={100}
-                alt=""
-                priority
-              />
-              <h2 className="font-bold text-[32px]">Contact & Helpdesk</h2>
-              <p className="text-[16px]">
-                Everything you need to know to set up your ADMS account, create
-                ponds, and start recording data.
-              </p>
-            </div>
+            <SupportNavCard
+              href=""
+              icon="/assets/started.svg"
+              title="Getting started guide"
+              description="Everything you need to know to set up your ADMS account, create ponds, and start recording data."
+            />
+
+            <SupportNavCard
+              href="/faqs"
+              icon="/assets/faq.svg"
+              title="FAQs"
+              description="Frequently asked questions and answers to every how to use and get the best of using ADMS."
+            />
+
+            <SupportNavCard
+              href=""
+              icon="/assets/contact.svg"
+              title="Contact & Helpdesk"
+              description="Everything you need to know to set up your ADMS account, create ponds, and start recording data."
+            />
           </div>
           <SupportCarousel />
         </div>

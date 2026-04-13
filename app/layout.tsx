@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bricolageGrotesque.variable} ${geistSans.variable} ${geistMono.variable} antialiased w-full overflow-x-hidden bg-[#F9FBFC]`}
+        className={`${bricolageGrotesque.variable} ${geistSans.variable} ${geistMono.variable} font-bricolage antialiased w-full overflow-x-hidden bg-[#F9FBFC]`}
       >
         <ClientLayout>{children}</ClientLayout>
       </body>

@@ -41,7 +41,7 @@ export function FarmSlider() {
           alt="Manage Farm section"
           className="w-[1232px] max-auto absolute opacity-50"
         />
-        <div className="z-[2000] w-[300px] mx-auto mt-5">
+        <div className="z-2000 w-[300px] mx-auto mt-5">
           <h2 className="text-white text-[35px] font-bold text-center px-2 relative">
             Manage Your Farm, Anytime, Anywhere
           </h2>

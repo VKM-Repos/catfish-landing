@@ -110,8 +110,8 @@ export default function Home() {
                       alt="German"
                     />
                   </div>
-                  <div className="absolute left-0 top-0 bottom-0 w-36 bg-gradient-to-r from-white/30 to-transparent pointer-events-none z-10" />
-                  <div className="absolute right-0 top-0 bottom-0 w-36 bg-gradient-to-l from-white/30 to-transparent pointer-events-none z-10" />
+                  <div className="absolute left-0 top-0 bottom-0 w-36 bg-linear-to-r from-white/30 to-transparent pointer-events-none z-10" />
+                  <div className="absolute right-0 top-0 bottom-0 w-36 bg-linear-to-l from-white/30 to-transparent pointer-events-none z-10" />
                 </div>
               </div>
             </div>
@@ -136,8 +136,8 @@ export default function Home() {
             One platform. Smarter farms. Stronger outcomes.
           </h2>
           <div className="w-full flex flex-col lg:flex-row items-stretch gap-8 lg:gap-10 mt-10 mx-auto">
-            <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-5 border-[#E8EEF2] rounded-[32px]">
-              <div className="w-full relative aspect-[4/3] xl:aspect-[5/4] rounded-2xl flex items-center justify-center overflow-hidden">
+            <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-5 border-[#E8EEF2] rounded-4xl">
+              <div className="w-full relative aspect-4/3 xl:aspect-5/4 rounded-2xl flex items-center justify-center overflow-hidden">
                 <Image
                   src={"/assets/linechart.svg"}
                   fill
@@ -157,7 +157,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-5 border-[#E8EEF2] rounded-4xl">
-              <div className="w-full relative aspect-[4/3] xl:aspect-[5/4] rounded-2xl flex items-center justify-center overflow-hidden">
+              <div className="w-full relative aspect-4/3 xl:aspect-5/4 rounded-2xl flex items-center justify-center overflow-hidden">
                 <Image
                   src={"/assets/feat.svg"}
                   fill
@@ -200,8 +200,8 @@ export default function Home() {
         </section>
       </FadeInSection>
       <FadeInSection>
-        <section className="md:bg-[url(/assets/rectangle.svg)] bg-[url(/assets/mobile_rectangle.svg)] bg-no-repeat bg-cover md:h-[1480px] h-[1048px] flex flex-col items-center justify-center mt-12">
-          <div className="flex flex-col gap-4 justify-center items-center mx-auto md:w-[695px] w-[353px] md:-mt-[200px]">
+        <section className="md:bg-[url(/assets/rectangle.svg)] bg-[url(/assets/mobile_rectangle.svg)] bg-no-repeat bg-cover flex flex-col items-center justify-center mt-12 py-36">
+          <div className="flex flex-col gap-4 justify-center items-center mx-auto md:w-[695px] w-[353px]">
             <h2 className="font-bold text-[40px] text-center">
               Key Features of ADMS
             </h2>

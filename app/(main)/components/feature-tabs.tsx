@@ -108,7 +108,7 @@ export default function FeatureTabs() {
         </div>
 
         <div className="hidden md:block relative pl-8">
-          <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gray-200" />
+          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200" />
 
           <div
             className="absolute left-0 w-0.5 bg-primary-500 transition-all duration-300"

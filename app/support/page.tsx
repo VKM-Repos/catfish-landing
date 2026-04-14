@@ -1,8 +1,7 @@
 "use client";
 import FAQSection from "@/components/shared/faq";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { SupportCarousel } from "./components/support-carousel";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -51,15 +50,14 @@ export default function Support() {
       className="flex flex-col items-start text-left md:w-[420px] h-[390px] border-3 border-neutral-200 rounded-2xl bg-[#F8F6F1] overflow-hidden relative group mx-5"
     >
       <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center" />
-      <Image
+      <img
         src={"/assets/play-button.svg"}
         width={100}
         height={100}
         alt=""
-        priority
         className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 opacity-80"
       />
-      <Image src={thumbnail} width={1280} height={720} alt="" priority />
+      <img src={thumbnail} width={1280} height={720} alt="" />
       <div className="gap-2 flex flex-col bg-[#EBEBEB] px-5 rounded-xl pt-4 h-full">
         <h2 className="font-bold line-clamp-2">{title}</h2>
         <p className="line-clamp-3">{description}</p>
@@ -79,7 +77,7 @@ export default function Support() {
         className="group flex flex-col items-start text-left w-[400px] h-80 p-5 overflow-hidden border-3 border-neutral-200 rounded-2xl bg-white transition-all duration-300 ease-in-out hover:scale-105"
       >
         <div className="mb-4 transition-transform duration-300 group-hover:-translate-y-1">
-          <Image src={icon} width={100} height={100} alt={title} priority />
+          <img src={icon} width={100} height={100} alt={title} />
         </div>
         <h2 className="font-bold text-[32px] text-neutral-700 transition-colors group-hover:text-primary-600">
           {title}

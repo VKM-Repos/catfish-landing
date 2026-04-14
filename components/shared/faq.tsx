@@ -9,9 +9,6 @@ import {
 export default function FAQSection() {
   return (
     <section className="max-w-2xl mx-auto px-4">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">
-        Frequently Asked Questions
-      </h2>
       <div className="h-[450px] overflow-y-auto pr-2">
         <Accordion
           type="single"

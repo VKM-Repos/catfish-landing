@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 const TABS = [
@@ -98,7 +97,7 @@ export default function FeatureTabs() {
         onMouseLeave={() => setIsPaused(false)}
       >
         <div className="relative w-full transition-opacity duration-300">
-          <Image
+          <img
             src={TABS[activeTab]?.image}
             width={780}
             height={443}

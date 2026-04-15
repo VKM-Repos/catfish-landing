@@ -2,7 +2,6 @@
 import FAQSection from "@/components/shared/faq";
 import Hero from "@/components/shared/hero";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import BeforeAfterSlider from "./components/slider";
 import FeatureTabs from "./components/feature-tabs";
 import { FarmSlider } from "@/components/shared/farm-slider";
@@ -18,21 +17,19 @@ export default function Home() {
       <FadeInSection>
         <Hero>
           <div className="relative flex flex-col md:flex-row md:items-center md:justify-center md:min-h-[calc(100vh-80px)] md:py-20 pt-12 overflow-hidden">
-            <Image
+            <img
               src="/assets/water_vector.svg"
               className="absolute top-0 w-[1445px] h-[500px] hidden md:block"
               alt=""
               width={1445}
               height={500}
-              priority
             />
-            <Image
+            <img
               src="/assets/water_vector.svg"
               className="absolute bottom-0 w-[1445px] h-[500px] hidden md:block"
               alt=""
               width={1445}
               height={500}
-              priority
             />
             <div className="relative md:w-[45%] lg:w-[40%] flex flex-col gap-5 md:ml-20 lg:ml-32 px-5 mt-10 md:mt-0">
               <h2 className="md:text-5xl lg:text-6xl text-4xl text-primary-700 font-bold md:w-full lg:w-[579px] w-[355px] md:leading-tight lg:leading-16">
@@ -116,12 +113,10 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-[55%] lg:w-[60%] flex flex-col items-center mt-10 md:mt-0">
-              <Image
+              <img
                 src={"/assets/catfish_dash.svg"}
                 width={1000}
                 height={400}
-                priority
-                quality={100}
                 alt="Dashboard screen"
                 className="object-cover z-10 w-full max-w-[1000px] h-auto"
               />
@@ -138,12 +133,10 @@ export default function Home() {
           <div className="w-full flex flex-col lg:flex-row items-stretch gap-8 lg:gap-10 mt-10 mx-auto">
             <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-5 border-[#E8EEF2] rounded-4xl">
               <div className="w-full relative aspect-4/3 xl:aspect-5/4 rounded-2xl flex items-center justify-center overflow-hidden">
-                <Image
+                <img
                   src={"/assets/linechart.svg"}
-                  fill
                   alt="Line chart sample"
                   className="object-contain"
-                  priority
                 />
               </div>
 
@@ -158,12 +151,10 @@ export default function Home() {
             </div>
             <div className="flex-1 flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start border-5 border-[#E8EEF2] rounded-4xl">
               <div className="w-full relative aspect-4/3 xl:aspect-5/4 rounded-2xl flex items-center justify-center overflow-hidden">
-                <Image
+                <img
                   src={"/assets/feat.svg"}
-                  fill
                   alt="Main Features"
                   className="object-contain"
-                  priority
                 />
               </div>
 
@@ -255,32 +246,29 @@ export default function Home() {
               </p>
               <ul className="space-y-5 w-[344px]">
                 <li className="flex items-center gap-3">
-                  <Image
+                  <img
                     src={"/assets/drop.svg"}
                     width={9}
                     height={15}
                     alt="Pointer"
-                    priority
                   />
                   Simple, intuitive interface built for everyday use
                 </li>
                 <li className="flex items-center gap-3">
-                  <Image
+                  <img
                     src={"/assets/drop.svg"}
                     width={9}
                     height={15}
                     alt="Pointer"
-                    priority
                   />{" "}
                   Real-time data sync with your cluster
                 </li>
                 <li className="flex items-center gap-3">
-                  <Image
+                  <img
                     src={"/assets/drop.svg"}
                     width={9}
                     height={15}
                     alt="Pointer"
-                    priority
                   />{" "}
                   Works seamlessly even in low-connectivity areas
                 </li>
@@ -299,13 +287,12 @@ export default function Home() {
               </div>
             </div>
             <div className="my-[50px]">
-              <Image
+              <img
                 src={"/assets/mobile_app.svg"}
                 width={518}
                 height={650}
                 alt="Mobile app sample"
                 className="md:w-[518px] md:h-[650px] w-[363px]"
-                priority
               />
             </div>
           </div>

@@ -17,21 +17,7 @@ interface SupportNavCardProps {
 }
 
 export default function Support() {
-  const [videos, setVideos] = useState([]);
-  const [isClient, setIsClient] = useState(false);
   const router = useRouter();
-  const getYoutubePlayList = async () => {
-    const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${PLAYLIST_ID}&key=${API_KEY}`,
-    );
-    const data = await response.json();
-    setVideos(data.items);
-  };
-
-  useEffect(() => {
-    setIsClient(true);
-    getYoutubePlayList();
-  }, []);
 
   const SupportCard = ({
     thumbnail,
@@ -39,7 +25,7 @@ export default function Support() {
     description,
     link,
   }: {
-    thumbnail: string;
+    thumbnail?: string;
     title: string;
     description: string;
     link: string;
@@ -142,25 +128,27 @@ export default function Support() {
           </p>
         </div>
         <div className="flex md:flex-row flex-col items-center md:justify-center gap-10 mt-10">
-          {!isClient ? null : videos?.length === 0 ? (
-            <p className="text-neutral-400">Loading videos...</p>
-          ) : (
-            videos?.map((video: any, k: number) => (
-              <SupportCard
-                title={video.snippet.title}
-                description={video.snippet.description}
-                thumbnail={video.snippet.thumbnails.maxres.url}
-                key={k}
-                link={`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`}
-              />
-            ))
-          )}
+          <SupportCard
+            title={"ADMS Tutorial: How to Log In and Access Your Dashboard"}
+            description={
+              "This video provides a step-by-step guide on how to log in to the AquaData Management System (ADMS). It walks users through accessing the platform, entering login details, and successfully reaching the dashboard."
+            }
+            thumbnail="/assets/youtubeThumbnail1.png"
+            link={`https://youtu.be/d5ldDtrNygw`}
+          />
+          <SupportCard
+            title={"GETTING STARTED ON ADMS"}
+            description={`In this video, you'll learn how to:
+              ✅ Register a pond (name, type, size, water source, and GPS location)✅ Add a fish batch to your pond (stocking date, quantity, and initial weight)✅ Register your feed types (brand, pellet size, and cost per kg)`}
+            thumbnail="/assets/youtubeThumbnail2.png"
+            link={`https://youtu.be/YAymxA5TWyE`}
+          />
         </div>
         <Link
           href="https://youtube.com/@viableknowledgemasters9397?si=m-W_ljK3o34Jp_nb"
           target="_blank"
         >
-          <Button className="bg-primary-500 text-white w-fit px-5 py-7 rounded-full mt-6">
+          <Button className="bg-primary-500 text-white w-fit px-5 py-7 rounded-full mt-6 cursor-pointer">
             View All on YouTube{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"

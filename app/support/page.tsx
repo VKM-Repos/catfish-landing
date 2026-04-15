@@ -1,14 +1,9 @@
 "use client";
 import FAQSection from "@/components/shared/faq";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
 import { SupportCarousel } from "./components/support-carousel";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "";
-const PLAYLIST_ID = process.env.NEXT_PUBLIC_PLAYLIST_ID || "";
-
 interface SupportNavCardProps {
   icon: string;
   title: string;
@@ -17,21 +12,7 @@ interface SupportNavCardProps {
 }
 
 export default function Support() {
-  const [videos, setVideos] = useState([]);
-  const [isClient, setIsClient] = useState(false);
   const router = useRouter();
-  const getYoutubePlayList = async () => {
-    const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${PLAYLIST_ID}&key=${API_KEY}`,
-    );
-    const data = await response.json();
-    setVideos(data.items);
-  };
-
-  useEffect(() => {
-    setIsClient(true);
-    getYoutubePlayList();
-  }, []);
 
   const SupportCard = ({
     thumbnail,
@@ -39,7 +20,7 @@ export default function Support() {
     description,
     link,
   }: {
-    thumbnail: string;
+    thumbnail?: string;
     title: string;
     description: string;
     link: string;
@@ -47,7 +28,7 @@ export default function Support() {
     <Link
       href={link}
       target="_blank"
-      className="flex flex-col items-start text-left md:w-[420px] h-[390px] border-3 border-neutral-200 rounded-2xl bg-[#F8F6F1] overflow-hidden relative group mx-5"
+      className="flex flex-col items-start text-left h-[390px] border-3 border-neutral-200 rounded-2xl bg-[#F8F6F1] overflow-hidden relative group"
     >
       <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center" />
       <img
@@ -57,7 +38,7 @@ export default function Support() {
         alt=""
         className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 opacity-80"
       />
-      <img src={thumbnail} width={1280} height={720} alt="" />
+      <img src={thumbnail} className=" w-full h-3/4" />
       <div className="gap-2 flex flex-col bg-[#EBEBEB] px-5 rounded-xl pt-4 h-full">
         <h2 className="font-bold line-clamp-2">{title}</h2>
         <p className="line-clamp-3">{description}</p>
@@ -107,21 +88,21 @@ export default function Support() {
           </div>
           <div className="md:flex items-center  gap-10 hidden absolute top-150 w-full justify-center px-2">
             <SupportNavCard
-              href=""
+              href="/support/help-center"
               icon="/assets/started.svg"
               title="Getting started guide"
               description="Everything you need to know to set up your ADMS account, create ponds, and start recording data."
             />
 
             <SupportNavCard
-              href="/faqs"
+              href="/support/faqs"
               icon="/assets/faq.svg"
               title="FAQs"
               description="Frequently asked questions and answers to every how to use and get the best of using ADMS."
             />
 
             <SupportNavCard
-              href=""
+              href="/support/contact"
               icon="/assets/contact.svg"
               title="Contact & Helpdesk"
               description="Everything you need to know to set up your ADMS account, create ponds, and start recording data."
@@ -141,26 +122,58 @@ export default function Support() {
             the official ADMS YouTube channel.
           </p>
         </div>
-        <div className="flex md:flex-row flex-col items-center md:justify-center gap-10 mt-10">
-          {!isClient ? null : videos?.length === 0 ? (
-            <p className="text-neutral-400">Loading videos...</p>
-          ) : (
-            videos?.map((video: any, k: number) => (
-              <SupportCard
-                title={video.snippet.title}
-                description={video.snippet.description}
-                thumbnail={video.snippet.thumbnails.maxres.url}
-                key={k}
-                link={`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`}
-              />
-            ))
-          )}
+        <div className="grid md:grid-cols-2 grid-cols-1 items-center md:justify-center gap-8 md:gap-4 mt-10 px-8 md:px-4">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-4">
+            <SupportCard
+              title={"ADMS Tutorial: How to Log In and Access Your Dashboard"}
+              description={
+                "This video provides a step-by-step guide on how to log in to the AquaData Management System (ADMS). It walks users through accessing the platform, entering login details, and successfully reaching the dashboard."
+              }
+              thumbnail="/assets/youtubeThumbnail1.png"
+              link={`https://youtu.be/d5ldDtrNygw`}
+            />
+            <SupportCard
+              title={"GETTING STARTED ON ADMS"}
+              description={`In this video, you'll learn how to:
+              ✅ Register a pond (name, type, size, water source, and GPS location)✅ Add a fish batch to your pond (stocking date, quantity, and initial weight)✅ Register your feed types (brand, pellet size, and cost per kg)`}
+              thumbnail="/assets/youtubeThumbnail2.png"
+              link={`https://youtu.be/YAymxA5TWyE`}
+            />
+          </div>
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-4 ">
+            <SupportCard
+              title={"Getting started on ADMS: Add Fish to Pond"}
+              description={`In this video, you'll learn how to add a fish batch to your pond on ADMS (Aqua Data Management System).
+              ✅ Create a batch name (your unique tag ID for tracking fish growth)
+              ✅ Select the pond you want to stock
+              ✅ Enter the quantity of fish supplied
+              ✅ Choose the fish size
+              ✅ Record the initial average body weight (in grams or kilograms)
+              ✅ Add your fish supplier details
+              ✅ Input the cost per unit (and let the system calculate your total cost automatically)
+              `}
+              thumbnail="/assets/youtubeThumbnail3.png"
+              link={`https://youtu.be/-1NQcoH1W4k?si=phsaNzMwxSyF16_b`}
+            />
+            <SupportCard
+              title={"Getting started on ADMS: Register Your Feeds"}
+              description={`In this video, you'll learn how to register your feed types on ADMS (Aqua Data Management System), the third and final step in the onboarding process.
+              ✅ Select your feed type from a comprehensive list of known feeds on the system
+              ✅ Choose your pellet size
+              ✅ Enter the quantity of feed currently in stock
+              ✅ Record the date of purchase
+              ✅ Input the total amount spent (and let the system automatically calculate your cost per kg)
+              Once all three onboarding steps are complete — registering your pond, adding fish, and registering your feed, you'll be taken straight to your dashboard where the real work begins!`}
+              thumbnail="/assets/youtubeThumbnail4.png"
+              link={`https://youtu.be/_20qlcPf9N8?si=Hp8lLiyQleAewkv5`}
+            />
+          </div>
         </div>
         <Link
           href="https://youtube.com/@viableknowledgemasters9397?si=m-W_ljK3o34Jp_nb"
           target="_blank"
         >
-          <Button className="bg-primary-500 text-white w-fit px-5 py-7 rounded-full mt-6">
+          <Button className="bg-primary-500 text-white w-fit px-5 py-7 rounded-full mt-6 cursor-pointer">
             View All on YouTube{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -205,9 +218,9 @@ export default function Support() {
                 <path
                   d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </Button>

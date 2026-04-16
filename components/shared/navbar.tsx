@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "../ui/button";
@@ -10,8 +10,35 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
 
+  const [isVisible, setIsVisible] = useState(true);
+
+  let lastScrollTop = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScrollTop) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // this line determines if the scroll is going up or down
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const headerIsvisible = !isVisible ? "top-[-200px]" : "top-0";
+
   return (
-    <nav className="pt-10 font-palanquin md:px-[150px] px-4 relative max-w-[1500px] mx-auto ">
+    <nav
+      className={`pt-10 font-palanquin md:px-[150px] px-4 max-w-[1500px] mx-auto sticky z-2000 ${headerIsvisible} transition-top duration-300`}
+    >
       <div className="flex justify-between items-center border border-neutral-200 p-3 rounded-full z-50 bg-white relative">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -68,18 +95,18 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-[3px] bg-[#005983] rounded-full transition-transform duration-300 ${
-              menuOpen ? "rotate-45 translate-y-[8px]" : ""
+            className={`block w-6 h-[3px] bg-primary-500 rounded-full transition-transform duration-300 ${
+              menuOpen ? "rotate-45 translate-y-2" : ""
             }`}
           />
           <span
-            className={`block w-6 h-[3px] bg-[#005983] rounded-full transition-opacity duration-300 ${
+            className={`block w-6 h-[3px] bg-primary-500 rounded-full transition-opacity duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-6 h-[3px] bg-[#005983] rounded-full transition-transform duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-[8px]" : ""
+            className={`block w-6 h-[3px] bg-primary-500 rounded-full transition-transform duration-300 ${
+              menuOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           />
         </button>
@@ -104,8 +131,8 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
-              <span className="block w-6 h-[3px] bg-[#005983] rounded-full rotate-45 translate-y-[3.5px]" />
-              <span className="block w-6 h-[3px] bg-[#005983] rounded-full -rotate-45 -translate-y-[3.5px]" />
+              <span className="block w-6 h-[3px] bg-primary-500 rounded-full rotate-45 translate-y-[3.5px]" />
+              <span className="block w-6 h-[3px] bg-primary-500 rounded-full -rotate-45 -translate-y-[3.5px]" />
             </button>
           </div>
 

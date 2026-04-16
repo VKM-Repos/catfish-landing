@@ -126,7 +126,7 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="md:px-[150px] px-5 flex flex-col justify-center items-center mt-10 w-full">
+        <section className="md:px-[150px] px-5 flex flex-col justify-center items-center mt-40 md:mt-10 w-full">
           <h2 className="text-[28px] md:text-[40px] font-bold md:w-[700px] w-full text-center px-4">
             One platform. Smarter farms. Stronger outcomes.
           </h2>
@@ -275,7 +275,7 @@ export default function Home() {
               </ul>
               <div className="flex items-center gap-5">
                 <PlayStoreButton
-                  link="/coming-soon"
+                  link="https://play.google.com/store/apps/details?id=com.vkm.aquadata"
                   image="/assets/google_play_icon.svg"
                   text="Play Store"
                 />

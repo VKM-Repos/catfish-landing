@@ -28,7 +28,7 @@ export default function Support() {
     <Link
       href={link}
       target="_blank"
-      className="flex flex-col items-start text-left h-[390px] border-3 border-neutral-200 rounded-2xl bg-[#F8F6F1] overflow-hidden relative group"
+      className="flex flex-col items-start text-left w-full max-w-[400px] h-[400px] border-3 border-neutral-200 rounded-2xl bg-[#F8F6F1] overflow-hidden relative group"
     >
       <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center" />
       <img
@@ -38,8 +38,11 @@ export default function Support() {
         alt=""
         className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 opacity-80"
       />
-      <img src={thumbnail} className=" w-full h-3/4" />
-      <div className="gap-2 flex flex-col bg-[#EBEBEB] px-5 rounded-xl pt-4 h-full">
+      <img
+        src={thumbnail}
+        className=" w-full h-3/5 object-contain block object-top"
+      />
+      <div className="gap-2 flex flex-col bg-[#EBEBEB] px-5 rounded-xl pt-4 h-2/5">
         <h2 className="font-bold line-clamp-2">{title}</h2>
         <p className="line-clamp-3">{description}</p>
       </div>
@@ -122,28 +125,25 @@ export default function Support() {
             the official ADMS YouTube channel.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 items-center md:justify-center gap-8 md:gap-4 mt-10 px-8 md:px-4">
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-4">
-            <SupportCard
-              title={"ADMS Tutorial: How to Log In and Access Your Dashboard"}
-              description={
-                "This video provides a step-by-step guide on how to log in to the AquaData Management System (ADMS). It walks users through accessing the platform, entering login details, and successfully reaching the dashboard."
-              }
-              thumbnail="/assets/youtubeThumbnail1.png"
-              link={`https://youtu.be/d5ldDtrNygw`}
-            />
-            <SupportCard
-              title={"GETTING STARTED ON ADMS"}
-              description={`In this video, you'll learn how to:
+        <div className="flex flex-col md:flex-row items-center md:justify-center gap-8 md:gap-4 mt-10 px-8 md:px-30">
+          <SupportCard
+            title={"ADMS Tutorial: How to Log In and Access Your Dashboard"}
+            description={
+              "This video provides a step-by-step guide on how to log in to the AquaData Management System (ADMS). It walks users through accessing the platform, entering login details, and successfully reaching the dashboard."
+            }
+            thumbnail="/assets/youtubeThumbnail1.png"
+            link={`https://youtu.be/d5ldDtrNygw`}
+          />
+          <SupportCard
+            title={"GETTING STARTED ON ADMS"}
+            description={`In this video, you'll learn how to:
               ✅ Register a pond (name, type, size, water source, and GPS location)✅ Add a fish batch to your pond (stocking date, quantity, and initial weight)✅ Register your feed types (brand, pellet size, and cost per kg)`}
-              thumbnail="/assets/youtubeThumbnail2.png"
-              link={`https://youtu.be/YAymxA5TWyE`}
-            />
-          </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-4 ">
-            <SupportCard
-              title={"Getting started on ADMS: Add Fish to Pond"}
-              description={`In this video, you'll learn how to add a fish batch to your pond on ADMS (Aqua Data Management System).
+            thumbnail="/assets/youtubeThumbnail2.png"
+            link={`https://youtu.be/YAymxA5TWyE`}
+          />
+          <SupportCard
+            title={"Getting started on ADMS: Add Fish to Pond"}
+            description={`In this video, you'll learn how to add a fish batch to your pond on ADMS (Aqua Data Management System).
               ✅ Create a batch name (your unique tag ID for tracking fish growth)
               ✅ Select the pond you want to stock
               ✅ Enter the quantity of fish supplied
@@ -152,22 +152,9 @@ export default function Support() {
               ✅ Add your fish supplier details
               ✅ Input the cost per unit (and let the system calculate your total cost automatically)
               `}
-              thumbnail="/assets/youtubeThumbnail3.png"
-              link={`https://youtu.be/-1NQcoH1W4k?si=phsaNzMwxSyF16_b`}
-            />
-            <SupportCard
-              title={"Getting started on ADMS: Register Your Feeds"}
-              description={`In this video, you'll learn how to register your feed types on ADMS (Aqua Data Management System), the third and final step in the onboarding process.
-              ✅ Select your feed type from a comprehensive list of known feeds on the system
-              ✅ Choose your pellet size
-              ✅ Enter the quantity of feed currently in stock
-              ✅ Record the date of purchase
-              ✅ Input the total amount spent (and let the system automatically calculate your cost per kg)
-              Once all three onboarding steps are complete — registering your pond, adding fish, and registering your feed, you'll be taken straight to your dashboard where the real work begins!`}
-              thumbnail="/assets/youtubeThumbnail4.png"
-              link={`https://youtu.be/_20qlcPf9N8?si=Hp8lLiyQleAewkv5`}
-            />
-          </div>
+            thumbnail="/assets/youtubeThumbnail3.png"
+            link={`https://youtu.be/-1NQcoH1W4k?si=phsaNzMwxSyF16_b`}
+          />
         </div>
         <Link
           href="https://youtube.com/@viableknowledgemasters9397?si=m-W_ljK3o34Jp_nb"

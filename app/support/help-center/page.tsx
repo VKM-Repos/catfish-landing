@@ -142,7 +142,7 @@ export default function HelpCenter() {
                         <div className="relative">
                           <TabsTrigger
                             value={tab.label}
-                            className="w-full text-neutral-400 md:text-[12px] text-[9px] px-1 bg-transparent shadow-none rounded-none data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-primary-600 group"
+                            className="w-full text-neutral-400 md:text-[12px] text-[9px] px-1 bg-transparent shadow-none rounded-none data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-primary-600 data-[state=active]:font-bold group cursor-pointer"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"

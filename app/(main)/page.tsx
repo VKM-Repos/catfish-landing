@@ -9,6 +9,7 @@ import { FadeInSection } from "@/components/ui/FadeInSection";
 import { useRouter } from "next/navigation";
 import PlayStoreButton from "@/components/ui/PlayStoreButton";
 import ManageFarmSection from "./components/ManageFarmSection";
+import MarqueeAnimation from "@/components/shared/MarqueeAnimation";
 
 export default function Home() {
   const router = useRouter();
@@ -16,26 +17,12 @@ export default function Home() {
     <>
       <FadeInSection>
         <Hero>
-          <div className="relative flex flex-col md:flex-row md:items-center md:justify-center md:min-h-[calc(100vh-80px)] md:py-20 pt-12 overflow-hidden">
-            <img
-              src="/assets/water_vector.svg"
-              className="absolute top-0 w-[1445px] h-[500px] hidden md:block"
-              alt=""
-              width={1445}
-              height={500}
-            />
-            <img
-              src="/assets/water_vector.svg"
-              className="absolute bottom-0 w-[1445px] h-[500px] hidden md:block"
-              alt=""
-              width={1445}
-              height={500}
-            />
-            <div className="relative md:w-[45%] lg:w-[40%] flex flex-col gap-5 md:ml-20 lg:ml-32 px-5 mt-10 md:mt-0">
-              <h2 className="md:text-5xl lg:text-6xl text-4xl text-primary-700 font-bold md:w-full lg:w-[579px] w-[355px] md:leading-tight lg:leading-16">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-center md:py-20 pt-12 overflow-hidden max-w-[1440px] w-full mx-auto pb-20">
+            <div className="relative md:w-[45%] lg:w-[40%] flex flex-col gap-5 md:ml-20 px-5 mt-10 md:mt-0 z-100">
+              <h2 className="text-6xl text-primary-700 font-bold w-full lg:w-[579px] md:leading-tight lg:leading-16">
                 Empowering Aqua-culture Through Smart Data Innovation
               </h2>
-              <p className="md:w-full lg:w-[516px] w-[355px]">
+              <p className="w-full lg:w-[516px] text-2xl leading-8 text-neutral-600">
                 ADMS bridges innovation and sustainability empowering clusters,
                 farmers, and development partners with real-time data that
                 drives informed decisions and long-term impact.
@@ -61,56 +48,7 @@ export default function Home() {
                   />
                 </svg>
               </Button>
-              <div className="w-full pt-8 md:pt-12 overflow-x-auto no-scrollbar flex">
-                <div className="relative w-full flex">
-                  <div className="group-marquee">
-                    <img
-                      src={"/assets/acp.svg"}
-                      className="inline-block flex-none basis-30 w-10 h-10"
-                      alt="ACP"
-                    />
-                    <img
-                      src={"/assets/fao.svg"}
-                      className="inline-block flex-none basis-30 w-10 h-10"
-                      alt="FAO"
-                    />
-                    <img
-                      src={"/assets/eu.svg"}
-                      className="inline-block flex-none basis-30 w-10 h-10"
-                      alt="EU"
-                    />
-                    <img
-                      src={"/assets/german.svg"}
-                      className="inline-block flex-none basis-30 w-10 h-10"
-                      alt="German"
-                    />
-                  </div>
-                  <div className="group-marquee aria-hidden:hidden">
-                    <img
-                      src={"/assets/acp.svg"}
-                      className="inline-block flex-none basis-30 w-10 h-10"
-                      alt="ACP"
-                    />
-                    <img
-                      src={"/assets/fao.svg"}
-                      className="inline-block flex-none basis-30 w-10 h-10"
-                      alt="FAO"
-                    />
-                    <img
-                      src={"/assets/eu.svg"}
-                      className="inline-block flex-none basis-30 w-10 h-10"
-                      alt="EU"
-                    />
-                    <img
-                      src={"/assets/german.svg"}
-                      className="inline-block flex-none basis-30 w-10 h-10"
-                      alt="German"
-                    />
-                  </div>
-                  <div className="absolute left-0 top-0 bottom-0 w-36 bg-linear-to-r from-white/30 to-transparent pointer-events-none z-10" />
-                  <div className="absolute right-0 top-0 bottom-0 w-36 bg-linear-to-l from-white/30 to-transparent pointer-events-none z-10" />
-                </div>
-              </div>
+              <MarqueeAnimation />
             </div>
             <div className="md:w-[55%] lg:w-[60%] flex flex-col items-center mt-10 md:mt-0">
               <img
@@ -126,7 +64,7 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="md:px-[150px] px-5 flex flex-col justify-center items-center mt-40 md:mt-10 w-full">
+        <section className="md:px-[150px] px-5 flex flex-col justify-center items-center mt-40 md:mt-10 w-full max-w-[1440px] mx-auto">
           <h2 className="text-[28px] md:text-[40px] font-bold md:w-[700px] w-full text-center px-4">
             One platform. Smarter farms. Stronger outcomes.
           </h2>
@@ -172,7 +110,7 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <section className="md:px-[150px] px-5 mt-10 w-full">
+        <section className="md:px-[150px] px-5 mt-10 w-full max-w-[1440px] mx-auto">
           <div className="md:wrapper flex md:flex-row flex-col w-full border-5 border-[#E8EEF2] rounded-[17px] mt-10">
             <BeforeAfterSlider />
             <div className="md:w-[50%] flex flex-col md:items-center md:justify-center p-3">
@@ -191,7 +129,7 @@ export default function Home() {
         </section>
       </FadeInSection>
       <FadeInSection>
-        <section className="md:bg-[url(/assets/rectangle.svg)] bg-[url(/assets/mobile_rectangle.svg)] bg-no-repeat bg-cover flex flex-col items-center justify-center mt-12 py-36">
+        <section className="md:bg-[url(/assets/rectangle.svg)] bg-[url(/assets/mobile_rectangle.svg)] bg-no-repeat bg-cover flex flex-col items-center justify-center mt-12 py-36 ">
           <div className="flex flex-col gap-4 justify-center items-center mx-auto md:w-[695px] w-[353px]">
             <h2 className="font-bold text-[40px] text-center">
               Key Features of ADMS
@@ -227,24 +165,24 @@ export default function Home() {
         </section>
       </FadeInSection>
       <FadeInSection>
-        <section className="px-5">
+        <section className="px-5 max-w-[1440px] mx-auto">
           <div className="flex justify-center mt-[100px]">
             <ManageFarmSection />
             <div className="md:hidden">
               <FarmSlider />
             </div>
           </div>
-          <div className=" md:px-[150px] flex md:flex-row flex-col md:justify-between md:items-center mt-14">
-            <div className="space-y-8">
-              <h2 className="font-bold md:text-[42px] text-[40px] md:w-[450px] w-[350px]">
+          <div className=" md:px-[150px] flex md:flex-row flex-col md:justify-center md:items-center mt-40">
+            <div className="flex flex-col gap-5 md:gap-6 p-6 md:p-10 justify-start items-start">
+              <h2 className="font-bold md:text-[42px] md:w-[450px] w-full text-5xl mb-2">
                 The Aquadata Mobile App Coming Soon
               </h2>
-              <p className="md:w-[518px] w-[353px]">
+              <p className="w-full lg:w-[516px] md:text-xl text-xl leading-7">
                 Smart aquaculture management, right from your phone. The ADMS
                 mobile app will make it easy for farmers and clusters to record
                 data, track performance, and stay connected — anytime, anywhere.
               </p>
-              <ul className="space-y-5 w-[344px]">
+              <ul className="space-y-5 text-xl">
                 <li className="flex items-center gap-3">
                   <img
                     src={"/assets/drop.svg"}
@@ -292,48 +230,50 @@ export default function Home() {
                 width={518}
                 height={650}
                 alt="Mobile app sample"
-                className="md:w-[518px] md:h-[650px] w-[363px]"
+                className="md:w-[518px] md:h-[650px] w-full h-auto object-contain min-w-[400px]"
               />
             </div>
           </div>
         </section>
       </FadeInSection>
       <FadeInSection>
-        <section className="md:px-[150px] flex md:flex-row flex-col md:items-start md:justify-center md:mt-[100px] px-5 gap-8">
-          <div className="md:w-[40%] h-fit md:top-20 space-y-10 shrink-0">
-            <div>
-              <h2 className="font-bold text-4xl">You have got questions? </h2>
-              <h2 className="font-bold text-4xl">We’ve got answers</h2>
-            </div>
-            <p>Quick answers to help you understand how ADMS works.</p>
-            <div className="bg-primary-400 w-[296px] p-5 rounded-xl text-white space-y-2">
-              <h4 className="text-[18px] font-bold">Still have questions?</h4>
-              <p className="text-sm">Send a detailed email and we’ll help.</p>
-              <Button
-                className="bg-primary-500 rounded-full text-sm py-2"
-                onClick={() => router.push("/support")}
-              >
-                Support
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+        <section className="md:mt-20">
+          <div className="flex justify-center lg:gap-20 xl:gap-40 md:flex-row flex-col w-full">
+            <div className="flex gap-8 flex-col p-4 self-center px-6">
+              <div>
+                <h2 className="font-bold text-4xl">You have got questions? </h2>
+                <h2 className="font-bold text-4xl">We’ve got answers</h2>
+              </div>
+              <p>Quick answers to help you understand how ADMS works.</p>
+              <div className="bg-primary-400 p-5 rounded-xl text-white space-y-2 w-[390px]">
+                <h4 className="text-[18px] font-bold">Still have questions?</h4>
+                <p className="text-sm">Send a detailed email and we’ll help.</p>
+                <Button
+                  className="bg-primary-500 rounded-full text-sm py-2"
+                  onClick={() => router.push("/support")}
                 >
-                  <path
-                    d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </Button>
+                  Support
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className="md:w-[60%] shrink-0">
-            <FAQSection />
+            <div className="min-w-0 w-full lg:w-2xl">
+              <FAQSection />
+            </div>
           </div>
         </section>
       </FadeInSection>

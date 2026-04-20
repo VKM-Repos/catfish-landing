@@ -56,7 +56,7 @@ export default function FeatureTabs() {
       if (!container) return;
 
       const { top, bottom } = container.getBoundingClientRect();
-      const isInView = top < window.innerHeight && bottom > 0;
+      const isInView = top < window.innerHeight && bottom > -100;
       if (!isInView) return;
 
       if (e.deltaY > 0 && activeTab < TABS.length - 1) {

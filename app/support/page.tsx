@@ -28,7 +28,7 @@ export default function Support() {
     <Link
       href={link}
       target="_blank"
-      className="flex flex-col items-start text-left w-full max-w-[400px] h-[400px] border-3 border-neutral-200 rounded-2xl bg-[#F8F6F1] overflow-hidden relative group"
+      className="flex flex-col items-start text-left w-full md:max-w-[400px] h-[400px] border-3 border-neutral-200 rounded-2xl bg-[#F8F6F1] overflow-hidden relative group"
     >
       <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center" />
       <img
@@ -40,7 +40,7 @@ export default function Support() {
       />
       <img
         src={thumbnail}
-        className=" w-full h-3/5 object-contain block object-top"
+        className=" w-full h-3/5 md:object-contain block object-top"
       />
       <div className="gap-2 flex flex-col bg-[#EBEBEB] px-5 rounded-xl pt-4 h-2/5">
         <h2 className="font-bold line-clamp-2">{title}</h2>
@@ -125,7 +125,7 @@ export default function Support() {
             the official ADMS YouTube channel.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row items-center md:justify-center gap-8 md:gap-4 mt-10 px-8 md:px-30">
+        <div className="flex flex-col md:flex-row items-center md:justify-center gap-8 md:gap-4 mt-10 px-8 lg:px-30">
           <SupportCard
             title={"ADMS Tutorial: How to Log In and Access Your Dashboard"}
             description={
@@ -180,41 +180,43 @@ export default function Support() {
           </Button>
         </Link>
       </section>
-      <section className="md:px-[150px] flex md:flex-row flex-col md:items-start md:justify-center md:mt-[100px] px-5 gap-8">
-        <div className="md:w-[40%] h-fit md:top-20 space-y-10 shrink-0">
-          <div>
-            <h2 className="font-bold text-4xl">You have got questions? </h2>
-            <h2 className="font-bold text-4xl">We’ve got answers</h2>
-          </div>
-          <p>Quick answers to help you understand how ADMS works.</p>
-          <div className="bg-primary-400 w-[296px] p-5 rounded-xl text-white space-y-2">
-            <h4 className="text-[18px] font-bold">Still have questions?</h4>
-            <p className="text-sm">Send a detailed email and we’ll help.</p>
-            <Button
-              className="bg-primary-500 rounded-full text-sm py-2"
-              onClick={() => router.push("/support")}
-            >
-              Support
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+      <section className="md:mt-20">
+        <div className="flex justify-center lg:gap-20 xl:gap-40 md:flex-row flex-col">
+          <div className="flex gap-8 flex-col p-4 self-center">
+            <div>
+              <h2 className="font-bold text-4xl">You have got questions? </h2>
+              <h2 className="font-bold text-4xl">We’ve got answers</h2>
+            </div>
+            <p>Quick answers to help you understand how ADMS works.</p>
+            <div className="bg-primary-400 p-5 rounded-xl text-white space-y-2 w-[390px]">
+              <h4 className="text-[18px] font-bold">Still have questions?</h4>
+              <p className="text-sm">Send a detailed email and we’ll help.</p>
+              <Button
+                className="bg-primary-500 rounded-full text-sm py-2"
+                onClick={() => router.push("/support")}
               >
-                <path
-                  d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Button>
+                Support
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Button>
+            </div>
           </div>
-        </div>
-        <div className="md:w-[60%] shrink-0">
-          <FAQSection />
+          <div className="min-w-0 w-full lg:w-2xl">
+            <FAQSection />
+          </div>
         </div>
       </section>
     </div>

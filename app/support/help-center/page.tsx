@@ -1,6 +1,15 @@
+"use client";
 import { Card } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
+import { useState } from "react";
 
 const tabs = [
   {
@@ -122,6 +131,7 @@ const tabs = [
 ];
 
 export default function HelpCenter() {
+  const [selectedTab, setSelectedTab] = useState(tabs[0].label);
   return (
     <div className="w-full h-[602px] shrink-0 rounded-b-4xl bg-[linear-gradient(181deg,#FFF_8.49%,#F1F6F8_77.17%,#4083A2_249.31%,#D0E0E8_249.31%)] mb-130">
       <div className="flex flex-col py-20 items-center text-center bg-[url(/assets/support_hero_bg.svg)] bg-center bg-cover bg-no-repeat h-[580px] w-full mx-auto rounded-b-3xl md:px-5">
@@ -130,19 +140,24 @@ export default function HelpCenter() {
           Get the Support You Need, When You Need It
         </p>
 
-        <Card className="flex rounded-4xl min-h-[700px] md:w-[80%] lg:w-[60%] bg-white mt-40 md:p-10 py-4 border-none shadow-lg">
-          <Tabs className="w-full" defaultValue={tabs[0].label}>
+        <Card className="flex rounded-4xl min-h-[800px] md:min-h-[700px] h-auto md:w-[80%] lg:w-[70%] xl:w-[60%] bg-white mt-40 md:p-10 py-4 mx-4 border-none shadow-lg">
+          <Tabs
+            className="w-full"
+            defaultValue={tabs[0].label}
+            value={selectedTab}
+            onValueChange={(value) => setSelectedTab(value)}
+          >
             <div className="grid grid-cols-3 w-full h-full">
-              <div className="border-r-neutral-200 border-r flex flex-col gap-5">
+              <div className="border-r-neutral-200 border-r flex-col gap-5 hidden lg:flex">
                 <h1 className="self-start ml-2 md:ml-0">Topics</h1>
                 <TabsList className="h-full items-start justify-start">
-                  <div className="flex flex-col gap-5 items-start justify-start">
+                  <div className="flex-col gap-5 items-start justify-start flex">
                     {tabs.map((tab) => {
                       return (
                         <div className="relative">
                           <TabsTrigger
                             value={tab.label}
-                            className="w-full text-neutral-400 md:text-[12px] text-[9px] px-1 bg-transparent shadow-none rounded-none data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-primary-600 group"
+                            className="w-full text-neutral-400 md:text-[12px] text-[9px] px-1 bg-transparent shadow-none rounded-none data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-primary-600 data-[state=active]:font-bold group cursor-pointer"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -166,12 +181,37 @@ export default function HelpCenter() {
                 </TabsList>
               </div>
 
-              <div className="col-span-2 flex flex-col">
+              <div className="col-span-3 lg:col-span-2 flex flex-col p-6 md:p-0">
+                <div className="mb-4 lg:hidden w-[70%]">
+                  <Select
+                    value={selectedTab}
+                    onValueChange={(value) => {
+                      setSelectedTab(value);
+                    }}
+                  >
+                    <SelectTrigger className="w-full border-r-0 border-t-0 border-l-0 rounded-none shadow-none border-b-2 border-primary-600">
+                      <div className="flex items-center justify-center gap-3 text-primary-600 data-[state=active]:border-none">
+                        <SelectValue placeholder="Select a view" />
+                      </div>
+                    </SelectTrigger>
+                    <SelectContent className="z-2000 bg-white">
+                      {tabs.map((tab) => (
+                        <SelectItem
+                          key={tab.label}
+                          value={tab.label}
+                          className="p-2 hover:bg-primary-100"
+                        >
+                          {tab.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
                 {tabs.map((tab) => (
                   <TabsContent
                     key={tab.label}
                     value={tab.label}
-                    className="md:p-5 px-2 py-2 text-left flex flex-col md:gap-4"
+                    className="p-5 px-2 py-2 text-left flex flex-col md:gap-4"
                   >
                     <h1 className="text-xl font-bold">Overview</h1>
                     <h2 className="text-neutral-600 text-[13px]">

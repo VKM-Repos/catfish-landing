@@ -87,7 +87,7 @@ export default function Footer() {
                   <Link href="/features">Features</Link>
                 </li>
                 <li className="hover:underline">
-                  <Link href="/">Clusters</Link>
+                  <Link href="/clusters">Clusters</Link>
                 </li>
               </ul>
             </div>

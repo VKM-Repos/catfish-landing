@@ -61,6 +61,9 @@ export default function Navbar() {
             <Link href="/features">Features</Link>
           </li>
           <li>
+            <Link href="/clusters">Clusters</Link>
+          </li>
+          <li>
             <Link href="/support">Support</Link>
           </li>
         </ul>
@@ -146,6 +149,11 @@ export default function Navbar() {
             <li>
               <Link href="/features" onClick={() => setMenuOpen(false)}>
                 Features
+              </Link>
+            </li>
+            <li>
+              <Link href="/clusters" onClick={() => setMenuOpen(false)}>
+                Clusters
               </Link>
             </li>
             <li>

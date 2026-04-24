@@ -226,7 +226,7 @@
   align-items: center;
   justify-content: center;
   gap: 1em;
-  animation:marquee 5s infinite linear;
+  /* animation:marquee 5s infinite linear; */
 }
 
 @layer utilities {

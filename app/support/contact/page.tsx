@@ -18,7 +18,7 @@ const ContactCards = ({
   buttonText?: string;
   subTitle?: string;
 }) => (
-  <Card className="flex flex-col items-start text-left flex-1 p-5 overflow-hidden border-3 border-neutral-200 rounded-2xl bg-white lg:gap-5 gap-3 w-full">
+  <Card className="flex flex-col items-start text-left flex-1 p-5 overflow-hidden border-3 border-neutral-200 rounded-2xl bg-white lg:gap-5 gap-3 w-full max-w-[500px]">
     <img src={icon} />
     <div className="flex flex-col gap-2 h-20">
       <h2 className="text-2xl font-bold">{title}</h2>
@@ -63,7 +63,7 @@ export default function Contact() {
           the support you need.
         </p>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-20 absolute top-90 md:top-85 w-full justify-center px-2 lg:px-10">
+        <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-10 absolute top-90 md:top-85 w-full justify-center px-2 lg:px-10">
           <ContactCards
             href="mailto:adms@viableknowledgemasters.com"
             icon="/assets/contact.svg"
@@ -75,8 +75,8 @@ export default function Contact() {
           <ContactCards
             href="https://forms.gle/vtjPMuaKfXntfsqu6"
             icon="/assets/started.svg"
-            title="Getting started guide"
-            subTitle="Everything you need to know to set up your ADMS account, create ponds, and start recording data."
+            title="Report a System Issue"
+            subTitle="If you encounter an error or technical issue while using ADMS, please report it through our form. This helps us track and resolve issues more efficiently."
             buttonText="Report an issue"
             description="Best for bugs, errors, or unexpected system behavior."
           />

@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  const date = new Date();
   return (
     <footer className="px-2">
       <div className="bg-primary-500 text-white rounded-t-4xl px-10 md:px-5">
-        <div className="flex md:flex-row flex-col md:justify-between py-16 md:w-[85%] mx-auto">
+        <div className="flex md:flex-row flex-col py-16 md:w-[85%] mx-auto max-w-[1200px] justify-between">
           <div className="space-y-5 md:mb-0">
             <div className="flex items-center gap-2">
               <Image
@@ -114,8 +115,8 @@ export default function Footer() {
           </div>
         </div>
         <hr className="border-0.5 border-primary-800" />
-        <div className="flex md:flex-row flex-col md:justify-between md:items-center md:px-[200px]">
-          <p>©2026 Aquadata. All rights reserved.</p>
+        <div className="flex md:flex-row flex-col md:justify-center md:gap-20 md:items-center md:px-[200px]">
+          <p>©{date.getFullYear()} Aquadata. All rights reserved.</p>
           <div className="flex gap-5 py-5">
             <Link href="/privacy-policy" className="hover:underline">
               Privacy Policy

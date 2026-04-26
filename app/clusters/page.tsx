@@ -113,7 +113,7 @@ export default function Clusters() {
                       className="object-cover md:aspect-5/4 aspect-square w-full rounded-2xl"
                       src={item.img}
                     />
-                    <Collapsible className="group rounded-xl data-open:bg-muted self-end absolute bg-white w-[90%] md:w-[80%] lg:w-[90%] p-4 text-neutral-600 -translate-x-1/2 left-[52%] md:left-1/2 md:bottom-4 bottom-6 ">
+                    <Collapsible className="group rounded-xl data-open:bg-muted self-end absolute bg-white w-[90%] md:w-[80%] lg:w-[90%] p-3 text-neutral-600 -translate-x-1/2 left-[52%] md:left-1/2 md:bottom-4 bottom-6 ">
                       <CollapsibleTrigger className="flex justify-between w-full flex-col items-center">
                         <div className="w-full flex justify-between items-center">
                           <p className="md:text-sm lg:text-[24px]">

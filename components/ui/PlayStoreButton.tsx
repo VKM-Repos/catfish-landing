@@ -14,7 +14,7 @@ const PlayStoreButton = ({
   const router = useRouter();
   return (
     <Link href={link}>
-      <Button className="cursor-pointer flex items-center gap-2 bg-primary-700 text-white text-sm font-normal rounded-full px-5 py-6">
+      <Button className="cursor-pointer flex items-center gap-2 bg-primary-700 text-white text-sm font-normal rounded-4xl px-5 py-8">
         <img src={image} width={20} height={20} alt="Play store" />
         <div className="text-left ">
           <p className="">Get it on</p>

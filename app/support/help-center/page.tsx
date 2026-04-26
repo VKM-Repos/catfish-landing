@@ -140,7 +140,7 @@ export default function HelpCenter() {
           Get the Support You Need, When You Need It
         </p>
 
-        <Card className="flex rounded-4xl min-h-[800px] md:min-h-[700px] h-auto md:w-[80%] lg:w-[70%] xl:w-[60%] bg-white mt-40 md:p-10 py-4 mx-4 border-none shadow-lg">
+        <Card className="flex rounded-4xl min-h-[800px] md:min-h-[700px] h-auto md:w-[80%] lg:w-[70%] xl:w-[60%] bg-white mt-16 md:p-10 py-4 mx-4 border-none shadow-lg">
           <Tabs
             className="w-full"
             defaultValue={tabs[0].label}
@@ -185,7 +185,7 @@ export default function HelpCenter() {
                 <div className="mb-4 lg:hidden w-[70%]">
                   <Select
                     value={selectedTab}
-                    onValueChange={(value) => {
+                    onValueChange={(value: string) => {
                       setSelectedTab(value);
                     }}
                   >

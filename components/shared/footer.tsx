@@ -115,7 +115,7 @@ export default function Footer() {
           </div>
         </div>
         <hr className="border-0.5 border-primary-800" />
-        <div className="flex md:flex-row flex-col md:justify-center md:gap-20 md:items-center md:px-[200px]">
+        <div className="flex md:flex-row flex-col md:justify-center md:gap-20 md:items-center md:px-[200px] pt-3 md:pt-0">
           <p>©{date.getFullYear()} Aquadata. All rights reserved.</p>
           <div className="flex gap-5 py-5">
             <Link href="/privacy-policy" className="hover:underline">

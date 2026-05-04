@@ -34,7 +34,7 @@ export default function ComingSoon() {
         <p className="font-medium text-xl">Launching soon. Stay connected.</p>
         <div className="flex self-center gap-5">
           <PlayStoreButton
-            link="/coming-soon"
+            link="https://play.google.com/store/apps/details?id=com.vkm.aquadata"
             image="/assets/google_play_icon.svg"
             text="Play Store"
           />
